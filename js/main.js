@@ -107,16 +107,13 @@ geotab.addin.snowtag = () => {
              //    	fillOpacity: 0.5,
              //    	radius: 500
              //    });
-             // var circle = L.circle([45.117, -93.508], {
-             // 	color: 'red',
-             // 	fillColor: '#f03',
-             // 	fillOpacity: 0.5,
-             // 	radius: 500
-             // }).addTo(map);
+
+             var latlng = [45.117, -93.508]
+             var circle = L.marker(latlng).addTo(map);
 
              map.fitBounds(bounds);
 
-             var layerGroup = L.layerGroup(coordinates)
+             var layerGroup = L.layerGroup([coordinates])
              console.log(layerGroup);
 
              toggleLoading(false);
