@@ -102,7 +102,7 @@ geotab.addin.snowtag = () => {
 
            if (coordinates.length == expectedCount) {
              map.fitBounds(bounds);
-             snowMapLayer.setLatLngs(coordinates);
+             snowMapLayer = L.marker(coordinates).addTo(map);
              toggleLoading(false);
              console.log("new coords", coordinates);
            }
@@ -127,7 +127,7 @@ geotab.addin.snowtag = () => {
     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2VvdGFiIiwiYSI6ImNpd2NlaW02MjAxc28yeW9idTR3dmRxdTMifQ.ZH0koA2g2YMMBOcx6EYbwQ').addTo(map);
     var credits = L.control.attribution().addTo(map);
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
-    snowMapLayer = L.marker(coords.latitude, coords.longitude).addTo(map);
+
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
