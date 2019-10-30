@@ -107,7 +107,7 @@ geotab.addin.snowtag = () => {
              //    	fillOpacity: 0.5,
              //    	radius: 500
              //    });
-             var circle = L.circle([-93.508, 45.11], {
+             var circle = L.circle([-93.508, 45.117], {
              	color: 'red',
              	fillColor: '#f03',
              	fillOpacity: 0.5,
