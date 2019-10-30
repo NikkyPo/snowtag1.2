@@ -112,7 +112,7 @@ geotab.addin.snowtag = () => {
              	fillColor: '#f03',
              	fillOpacity: 0.5,
              	radius: 500
-             }).addTo(mymap);
+             }).addTo(map);
 
              map.fitBounds(bounds);
 
