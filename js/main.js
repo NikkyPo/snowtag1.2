@@ -116,7 +116,7 @@ geotab.addin.snowtag = () => {
 
              map.fitBounds(bounds);
 
-             var layerGroup = L.layerGroup({coordinates})
+             var layerGroup = L.layerGroup(coordinates)
              console.log(layerGroup);
 
              toggleLoading(false);
