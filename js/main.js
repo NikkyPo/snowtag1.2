@@ -101,10 +101,17 @@ geotab.addin.snowtag = () => {
                bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
 
            if (coordinates.length == expectedCount) {
+             snowMapLayer.addLayer(new L.circle(coordinates), {
+                	color: 'red',
+                	fillColor: '#f03',
+                	fillOpacity: 0.5,
+                	radius: 500
+                });
+                
              map.fitBounds(bounds);
 
-             var marker = L.layerGroup([coordinates])
-             console.log(marker);
+             // var layerGroup = L.layerGroup([coordinates])
+             // console.log(layerGroup);
 
              toggleLoading(false);
              console.log("new coords", coordinates);
