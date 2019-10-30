@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snowtagging Test Map</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link rel="stylesheet" href="css/spinner.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+</head>
+<body>
+
+  <div id="snowtag" style="height: calc(100% - 40px)">
+
+    <div class="cssGrid sm-part-12">
+      <div class="lg-part-2 md-part-3 sm-part-12">
+        <div id="controls">
+
+          <h2>Snowtagging Test Heatmap</h2>
+          <p>
+            See a heat map of historical snowtagging locations.
+          </p>
+
+          <h3>Instructions</h3>
+          <p>
+            Select a vehicle and then select a date range to display where the vehicle has issued a ticket. Areas of the map colored which appear
+            <i>hot</i> indicates that the vehicle has spent time at that location.
+          </p>
+
+          <label for="vehicles">Vehicle</label>
+          <select id="vehicles" class="checkmateFormEditField">
+            <option disabled="disabled">Select a vehicle</option>
+          </select>
+
+          <label for="from">From</label>
+          <input id="from" type="datetime-local" class="checkmateFormEditField" />
+
+          <label for="to">To</label>
+          <input id="to" type="datetime-local" class="checkmateFormEditField" />
+
+          <label for="message"></label>
+          <p id="message"></p>
+
+          <div id="error"></div>
+
+          <div id="loading" class="spinner" style="display:none">
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg-part-10 md-part-9 sm-part-12">
+          <div id="snowtag-map" style="width:100%"></div>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
