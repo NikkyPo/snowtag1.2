@@ -102,16 +102,19 @@ geotab.addin.snowtag = () => {
 
            if (coordinates.length == expectedCount) {
 
-             // var latlng = [[45.117, -93.508], [45.217, -93.508]]
-             for (var i = 0; i < coordinates.length; i++) {
-             console.log("leaf coords", coordinates);
-         			// var circle = new L.marker([coordinates[i][0],coordinates[i][1]])
-              // snowMapLayer.addLayer(circle)
-         		}
+             // snowMapLayer.addLayer(new L.circleMarker([coordinates]), {
+             //    	color: 'red',
+             //    	fillColor: '#f03',
+             //    	fillOpacity: 0.5,
+             //    	radius: 500
+             //    });
+
+            var latlng = [[45.117, -93.508], [45.217, -93.508]]
+         		var circle = new L.marker([latlng[0][1],latlng[1][1]])
              map.fitBounds(bounds);
 
              toggleLoading(false);
-             // console.log("new coords", coordinates);
+             console.log("new coords", coordinates);
            }
        }, error => {
          errorHandler(error);
