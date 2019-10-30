@@ -103,7 +103,7 @@ geotab.addin.snowtag = () => {
            if (coordinates.length == expectedCount) {
              map.fitBounds(bounds);
 
-             var marker = L.layerGroup([coordinates])
+             var marker = L.Marker([coordinates])
              console.log(marker);
 
              toggleLoading(false);
