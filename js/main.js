@@ -101,6 +101,7 @@ geotab.addin.snowtag = () => {
                bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
 
            if (coordinates.length == expectedCount) {
+
              // snowMapLayer.addLayer(new L.circleMarker([coordinates]), {
              //    	color: 'red',
              //    	fillColor: '#f03',
@@ -108,7 +109,9 @@ geotab.addin.snowtag = () => {
              //    	radius: 500
              //    });
 
-             var latlng = [45.117, -93.508]
+             var latlng = [coordinates]
+             console.log("leaflet coords", latlng);
+             
              var circle = L.marker(latlng).addTo(map);
 
              map.fitBounds(bounds);
