@@ -4,7 +4,7 @@
 	"version": "1.0",
 	"items": [
 		{
-			"icon": "icon_test.svg",
+			"icon": "images/icon_test.svg",
 			"url": "https://nikkypo.github.io/snowtag_test/mapreplay.html",
 			"path": "sdkAddinsLink/",
 			"menuName": {
