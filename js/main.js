@@ -104,7 +104,7 @@ geotab.addin.snowtag = () => {
              map.fitBounds(bounds);
 
              var marker = L.Marker(coordinates)
-             snowMapLayer.addLayer(marker);
+             console.log(marker)
 
              toggleLoading(false);
              console.log("new coords", coordinates);
