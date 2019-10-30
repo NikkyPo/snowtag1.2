@@ -109,9 +109,9 @@ geotab.addin.snowtag = () => {
              //    	radius: 500
              //    });
 
-             var latlng = [[45.117, -93.508], [45.217, -93.508]]
-             for (var i = 0; i < latlng.length; i++) {
-         			var circle = new L.marker([latlng[i][0],latlng[i][1]])
+             // var latlng = [[45.117, -93.508], [45.217, -93.508]]
+             for (var i = 0; i < coordinates.length; i++) {
+         			var circle = new L.marker([coordinates[i][0],coordinates[i][1]])
               snowMapLayer.addLayer(circle)
          		}
              map.fitBounds(bounds);
