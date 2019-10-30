@@ -101,12 +101,18 @@ geotab.addin.snowtag = () => {
                bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
 
            if (coordinates.length == expectedCount) {
-             snowMapLayer.addLayer(new L.circleMarker([coordinates]), {
-                	color: 'red',
-                	fillColor: '#f03',
-                	fillOpacity: 0.5,
-                	radius: 500
-                });
+             // snowMapLayer.addLayer(new L.circleMarker([coordinates]), {
+             //    	color: 'red',
+             //    	fillColor: '#f03',
+             //    	fillOpacity: 0.5,
+             //    	radius: 500
+             //    });
+             var circle = L.circle([-93.508, 45.11], {
+             	color: 'red',
+             	fillColor: '#f03',
+             	fillOpacity: 0.5,
+             	radius: 500
+             }).addTo(mymap);
 
              map.fitBounds(bounds);
 
