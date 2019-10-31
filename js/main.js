@@ -93,7 +93,7 @@ geotab.addin.snowtag = () => {
            }
        }, logRecords => {
          /**Adds coordinates to map**/
-         newCoords = []
+         let newCoords = []
 
          coordinates.push({
            lat: logRecords[0].latitude,
