@@ -104,7 +104,7 @@ geotab.addin.snowtag = () => {
          if (coordinates.length == expectedCount) {
            console.log("coordinates for leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
-             var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
+             var newCoords = new L.marker([coordinates[i].lat,coordinates[i].lon])
              snowMapLayer.addLayer(newCoords)
          		}
              map.fitBounds(bounds);
