@@ -123,10 +123,10 @@ geotab.addin.snowtag = () => {
                  line.push(new L.LatLng(coords.lat, coords.long));
              });
 
-             console.log(coords)
+             console.log("test ",coords)
              console.log("coordinates for leaflet",coordinates)
 
-         		 var circle = new L.marker(line);
+         		 var circle = L.marker.circle(line);
              snowMapLayer.addLayer(circle)
 
             //  var latlng = [[45.117, -93.508], [45.217, -93.508]]
