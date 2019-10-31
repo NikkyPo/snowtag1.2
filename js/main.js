@@ -103,29 +103,26 @@ geotab.addin.snowtag = () => {
            if (coordinates.length == expectedCount) {
 
              // var latlng = [[45.117, -93.508], [45.217, -93.508], [45.217, -93.608]]
-             var latlng = [{
-               lat:45.117,
-               long:-93.108,
-               value: 1
-             },
-               {
-               lat:45.117,
-               long:-93.408,
-               value: 1
-             },
-             {
-               lat:45.217,
-               long:-93.508,
-               value: 1
-             }]
+             // var latlng = [{
+             //   lat:45.117,
+             //   long:-93.108,
+             //   value: 1
+             // },
+             //   {
+             //   lat:45.117,
+             //   long:-93.408,
+             //   value: 1
+             // },
+             // {
+             //   lat:45.217,
+             //   long:-93.508,
+             //   value: 1
+             // }]
 
-             console.log(latlng)
-             console.log("coordinates for leaflet",coordinates)
+             // console.log(latlng)
 
-             for (var i = 0; i < coordinates.length; i++) {
          		 var circle = new L.marker([coordinates[i].lat,coordinates[i].lon])
              snowMapLayer.addLayer(circle)
-         		}
 
             //  var latlng = [[45.117, -93.508], [45.217, -93.508]]
             //  for (var i = 0; i < latlng.length; i++) {
