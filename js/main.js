@@ -100,13 +100,14 @@ geotab.addin.snowtag = () => {
            value: 1
          });
          bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
+
          if (coordinates.length == expectedCount) {
+           map.fitBounds(bounds);
            console.log("coordinates for leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
              snowMapLayer.addLayer(newCoords)
          		}
-            map.fitBounds(bounds);
             toggleLoading(false);
            }
        }, error => {
