@@ -93,6 +93,7 @@ geotab.addin.snowtag = () => {
            }
        }, logRecords => {
          /**Adds coordinates to map**/
+         newCoords = []
 
          coordinates.push({
            lat: logRecords[0].latitude,
@@ -105,9 +106,10 @@ geotab.addin.snowtag = () => {
            map.fitBounds(bounds);
            console.log("coordinates for leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
-             var newCoords = new L.marker([coordinates[i].lat,coordinates[i].lon])
-             snowMapLayer.addLayer(newCoords)
+             newCoords = new L.marker([coordinates[i].lat,coordinates[i].lon])
+
          		}
+             snowMapLayer.addLayer(newCoords)
              toggleLoading(false);
            }
 
