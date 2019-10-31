@@ -120,9 +120,13 @@ geotab.addin.snowtag = () => {
              // }]
 
              // console.log(latlng)
+             console.log("coordinates for leaflet",coordinates)
 
-         		 var newCoords = new L.marker([coordinates.lat,coordinates.lon])
-             snowMapLayer.addLayer(newCoords)
+             for (var i = 0; i < coordinates.length; i++) {
+         		 var circle = new L.marker([coordinates[i].lat,coordinates[i].lon])
+             snowMapLayer.addLayer(circle)
+         		}
+            console.log("new coords for leaflet circle",circle)
 
             //  var latlng = [[45.117, -93.508], [45.217, -93.508]]
             //  for (var i = 0; i < latlng.length; i++) {
