@@ -102,18 +102,28 @@ geotab.addin.snowtag = () => {
 
            if (coordinates.length == expectedCount) {
 
-             // snowMapLayer.addLayer(new L.circleMarker([coordinates]), {
-             //    	color: 'red',
-             //    	fillColor: '#f03',
-             //    	fillOpacity: 0.5,
-             //    	radius: 500
-             //    });
-             var latlng = [[45.117, -93.508], [45.217, -93.508], [45.217, -93.608]]
+             // var latlng = [[45.117, -93.508], [45.217, -93.508], [45.217, -93.608]]
+             var latlng = [{
+               lat:45.117,
+               long:-93.108,
+               value: 1
+             },
+               {
+               lat:45.117,
+               long:-93.408,
+               value: 1
+             },
+             {
+               lat:45.217,
+               long:-93.508,
+               value: 1
+             }]
+
              console.log(latlng)
              console.log("coordinates for leaflet",coordinates)
 
              for (var i = 0; i < latlng.length; i++) {
-         		 var circle = new L.marker([latlng[i][0],latlng[i][1]])
+         		 var circle = new L.marker(latlng.lat,latlng.long)
              snowMapLayer.addLayer(circle)
          		}
 
