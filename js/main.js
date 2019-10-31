@@ -92,7 +92,7 @@ geotab.addin.snowtag = () => {
                }
            }
        }, logRecords => {
-         /**Adds coordinates to map**/
+         /**Removes previous layers before adding new ones**/
          snowMapLayer.clearLayers();
          coordinates.push({
            lat: logRecords[0].latitude,
@@ -100,7 +100,7 @@ geotab.addin.snowtag = () => {
            value: 1
          });
          bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
-
+         /**Adds coordinates to map**/
          if (coordinates.length == expectedCount) {
            console.log("new leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
@@ -110,16 +110,6 @@ geotab.addin.snowtag = () => {
          		}
              toggleLoading(false);
            }
-
-         // if (coordinates.length == expectedCount) {
-         //   map.fitBounds(bounds);
-         //   console.log("coordinates for leaflet",coordinates)
-         //   for (var i = 0; i < coordinates.length; i++) {
-         //     var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
-         //     snowMapLayer.addLayer(newCoords)
-         // 		}
-         //     toggleLoading(false);
-         //   }
        }, error => {
          errorHandler(error);
          toggleLoading(false);
