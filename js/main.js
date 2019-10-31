@@ -55,6 +55,7 @@ geotab.addin.snowtag = () => {
     let dateFrom = new Date(fromValue).toISOString();
     let dateTo = new Date(toValue).toISOString();
 
+    /**Calls Exceptions using users previous date selections**/
     api.call("Get", {
            "typeName": "ExceptionEvent",
            "search": {
@@ -79,7 +80,7 @@ geotab.addin.snowtag = () => {
                logRecord(exception[i],coordinates,bounds,exception.length);
           }
        });
-
+    /**Calls logRecords from exception event**/
    function logRecord(exception,coordinates,bounds,expectedCount) {
        api.call("Get", {
            "typeName": "LogRecord",
@@ -91,27 +92,22 @@ geotab.addin.snowtag = () => {
                }
            }
        }, logRecords => {
-         // console.log(logRecords)
+         /**Adds coordinates to map**/
 
-               coordinates.push({
-                 lat: logRecords[0].latitude,
-                 lon: logRecords[0].longitude,
-                 value: 1
-               });
-               bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
-
-           if (coordinates.length == expectedCount) {
-
-             console.log("coordinates for leaflet",coordinates)
-
-             for (var i = 0; i < coordinates.length; i++) {
-         		 var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
+         coordinates.push({
+           lat: logRecords[0].latitude,
+           lon: logRecords[0].longitude,
+           value: 1
+         });
+         bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
+         if (coordinates.length == expectedCount) {
+           console.log("coordinates for leaflet",coordinates)
+           for (var i = 0; i < coordinates.length; i++) {
+             var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
              snowMapLayer.addLayer(newCoords)
          		}
-             map.fitBounds(bounds);
-
-             toggleLoading(false);
-             console.log("new coords", coordinates);
+            map.fitBounds(bounds);
+            toggleLoading(false);
            }
        }, error => {
          errorHandler(error);
@@ -211,6 +207,7 @@ geotab.addin.snowtag = () => {
         elVehicleSelect.removeChild(elVehicleSelect.firstChild);
       }
 
+      /**Calls special snowtagging group vehicles**/
       api.call('Get', {
         typeName: 'Device',
         search: {
