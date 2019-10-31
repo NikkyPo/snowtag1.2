@@ -123,7 +123,7 @@ geotab.addin.snowtag = () => {
              console.log("coordinates for leaflet",coordinates)
 
              for (var i = 0; i < latlng.length; i++) {
-         		 var circle = new L.marker(latlng.lat,latlng.long)
+         		 var circle = new L.marker(latlng[i].lat,latlng[i].long)
              snowMapLayer.addLayer(circle)
          		}
 
