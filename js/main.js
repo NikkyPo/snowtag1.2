@@ -102,14 +102,24 @@ geotab.addin.snowtag = () => {
          bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
 
          if (coordinates.length == expectedCount) {
-           map.fitBounds(bounds);
            console.log("coordinates for leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
+             snowMapLayer.addLayer(newCoords)
          		}
-            snowMapLayer.addLayer(newCoords)
-            toggleLoading(false);
+             map.fitBounds(bounds);
+             toggleLoading(false);
            }
+
+         // if (coordinates.length == expectedCount) {
+         //   map.fitBounds(bounds);
+         //   console.log("coordinates for leaflet",coordinates)
+         //   for (var i = 0; i < coordinates.length; i++) {
+         //     var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
+         //     snowMapLayer.addLayer(newCoords)
+         // 		}
+         //     toggleLoading(false);
+         //   }
        }, error => {
          errorHandler(error);
          toggleLoading(false);
