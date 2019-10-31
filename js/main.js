@@ -102,11 +102,11 @@ geotab.addin.snowtag = () => {
          bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
 
          if (coordinates.length == expectedCount) {
-           console.log("new leaflet",coordinates)
+           console.log("leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
              var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
-             snowMapLayer.setLatLngs(newCoords)
+             snowMapLayer.setLatLng(newCoords)
          		}
              toggleLoading(false);
            }
