@@ -106,7 +106,7 @@ geotab.addin.snowtag = () => {
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
              var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
-             snowMapLayer.addLayer(newCoords)
+             snowMapLayer.setLatLngs(newCoords)
          		}
              toggleLoading(false);
            }
