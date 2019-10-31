@@ -106,9 +106,9 @@ geotab.addin.snowtag = () => {
            console.log("coordinates for leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
-             snowMapLayer.addLayer(newCoords)
-             toggleLoading(false);
          		}
+            snowMapLayer.addLayer(newCoords)
+            toggleLoading(false);
            }
        }, error => {
          errorHandler(error);
