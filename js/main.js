@@ -101,9 +101,10 @@ geotab.addin.snowtag = () => {
                bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
 
            if (coordinates.length == expectedCount) {
+             var line = []
 
              // var latlng = [[45.117, -93.508], [45.217, -93.508], [45.217, -93.608]]
-             var latlng = [{
+             var coords = [{
                lat:45.117,
                long:-93.108,
                value: 1
@@ -118,18 +119,17 @@ geotab.addin.snowtag = () => {
                long:-93.508,
                value: 1
              }]
+             coords.forEach(function (coords, i) {
+                 line.push(new L.LatLng(coords.lat, coords.long));
+             });
 
-             console.log(latlng)
+             console.log(coords)
              console.log("coordinates for leaflet",coordinates)
 
-            //  for (var i = 0; i < latlng.length; i++) {
-         		//  var circle = new L.marker(latlng[i].lat,latlng[i].long)
-            //  snowMapLayer.addLayer(circle)
-         		// }
-            for (var i = 0; i < coordinates.length; i++) {
-            var circle = new L.marker(coordinates[i].lat,coordinates[i].lon)
-            snowMapLayer.addLayer(circle)
-           }            //  var latlng = [[45.117, -93.508], [45.217, -93.508]]
+         		 var circle = new L.marker(line);
+             snowMapLayer.addLayer(circle)
+
+            //  var latlng = [[45.117, -93.508], [45.217, -93.508]]
             //  for (var i = 0; i < latlng.length; i++) {
          		//  var circle = new L.marker([latlng[i][0],latlng[i][1]])
             //  snowMapLayer.addLayer(circle)
