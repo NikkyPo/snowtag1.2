@@ -208,6 +208,7 @@ geotab.addin.snowtag = () => {
       api = freshApi;
       while (elVehicleSelect.firstChild) {
         elVehicleSelect.removeChild(elVehicleSelect.firstChild);
+        console.log(elVehicleSelect.firstChild)
       }
 
       /**Calls special snowtagging group vehicles**/
@@ -228,7 +229,6 @@ geotab.addin.snowtag = () => {
           let option = new Option();
           option.text = vehicle.name;
           option.value = vehicle.id;
-          console.log(option.value)
           elVehicleSelect.add(option);
         });
       }, errorHandler);
