@@ -226,6 +226,7 @@ geotab.addin.snowtag = () => {
         let option = new Option();
         option.text = "Select All"
         option.value = "allvehicles"
+        elVehicleSelect.add(option);
 
         vehicles.sort(sortByName);
 
