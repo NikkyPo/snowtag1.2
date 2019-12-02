@@ -9,6 +9,7 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
+  let allvehicles;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -135,6 +136,7 @@ geotab.addin.snowtag = () => {
     snowMapLayer = L.layerGroup().addTo(map);
 
     // find reused elements
+    allvehicles = document.getElementById('allvehicles');
     elVehicleSelect = document.getElementById('vehicles');
     elDateFromInput = document.getElementById('from');
     elDateToInput = document.getElementById('to');
@@ -220,6 +222,8 @@ geotab.addin.snowtag = () => {
           return;
         }
 
+        allvehicles.options[allvehicles.options.length] = new Option('Select all vehicles', 'allvehicles');
+
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
@@ -228,6 +232,8 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           elVehicleSelect.add(option);
         });
+
+
       }, errorHandler);
 
       setTimeout(() => {
