@@ -46,6 +46,8 @@ geotab.addin.snowtag = () => {
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
+    console.log(deviceId)
+
     errorHandler('');
 
     if ((deviceId === null) || (fromValue === '') || (toValue === '')) {
@@ -208,7 +210,6 @@ geotab.addin.snowtag = () => {
       api = freshApi;
       while (elVehicleSelect.firstChild) {
         elVehicleSelect.removeChild(elVehicleSelect.firstChild);
-        console.log(elVehicleSelect.firstChild)
       }
 
       /**Calls special snowtagging group vehicles**/
