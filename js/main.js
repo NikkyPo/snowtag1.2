@@ -225,7 +225,7 @@ geotab.addin.snowtag = () => {
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
-          console.log(vehicle)
+          console.log(vehicle.name)
           let option = new Option();
           option.text = vehicle.name;
           option.value = vehicle.id;
