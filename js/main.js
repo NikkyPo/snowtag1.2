@@ -210,15 +210,6 @@ geotab.addin.snowtag = () => {
         elVehicleSelect.removeChild(elVehicleSelect.firstChild);
       }
 
-      function selectAll()
-      {
-        options = document.getElementsByTagName("option");
-        for ( i=0; i<options.length; i++)
-        {
-          options[i].selected = "true";
-        }
-      }
-
       /**Calls special snowtagging group vehicles**/
       api.call('Get', {
         typeName: 'Device',
@@ -234,6 +225,7 @@ geotab.addin.snowtag = () => {
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
+          console.log(vehicle)
           let option = new Option();
           option.text = vehicle.name;
           option.value = vehicle.id;
