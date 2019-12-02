@@ -9,6 +9,8 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
+
+  let allVehicles;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
