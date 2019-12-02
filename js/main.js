@@ -230,7 +230,6 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           console.log(option.value)
           elVehicleSelect.add(option);
-          allVehicles.add(option;)
         });
       }, errorHandler);
 
