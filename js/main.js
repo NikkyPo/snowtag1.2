@@ -42,11 +42,11 @@ geotab.addin.snowtag = () => {
    * Displays the snowtags of a vehicle location history
    */
   let displaySnowMap = function () {
+    let allDevices = allVehicles.values;
     let deviceId = elVehicleSelect.value;
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
-    console.log(deviceId)
 
     errorHandler('');
 
@@ -223,6 +223,9 @@ geotab.addin.snowtag = () => {
         if (!vehicles || vehicles.length < 0) {
           return;
         }
+        let option = new Option();
+        option.text = "Select All"
+        option.value = "allvehicles"
 
         vehicles.sort(sortByName);
 
