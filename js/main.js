@@ -210,6 +210,15 @@ geotab.addin.snowtag = () => {
         elVehicleSelect.removeChild(elVehicleSelect.firstChild);
       }
 
+      function selectAll()
+      {
+        options = document.getElementsByTagName("option");
+        for ( i=0; i<options.length; i++)
+        {
+          options[i].selected = "true";
+        }
+      }
+
       /**Calls special snowtagging group vehicles**/
       api.call('Get', {
         typeName: 'Device',
