@@ -232,7 +232,7 @@ geotab.addin.snowtag = () => {
 
           var label = document.createElement('label')
           label.htmlFor = "vehicles";
-          label.appendChild(document.createTextNode('text for label after checkbox'));
+          label.appendChild(document.createTextNode(option.name));
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.appendChild(label);
