@@ -231,9 +231,11 @@ geotab.addin.snowtag = () => {
           option.name = vehicle.name;
           option.value = vehicle.id;
 
+          var break = document.createElement('br')
+
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
-          elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
+          elVehicleSelect.appendChild(break)
         });
 
       }, errorHandler);
