@@ -226,7 +226,7 @@ geotab.addin.snowtag = () => {
 
         vehicles.forEach(vehicle => {
           let option = document.createElement("input")
-          option.type = "checkbox"
+          option.setAttribute('type', 'checkbox')
           option.name = vehicle.name
           option.text = vehicle.name;
           option.value = vehicle.id;
