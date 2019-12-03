@@ -31,15 +31,12 @@
             For testing purposes - Do not use.
           </p>
 
-          <label for="allvehicles">Vehicle</label>
-          <select id="allvehicles" class="checkmateFormEditField">
-            <option disabled="disabled">Select all vehicles</option>
-          </select>
-
           <label for="vehicles">Vehicle</label>
           <select id="vehicles" class="checkmateFormEditField">
             <option disabled="disabled">Select a vehicle</option>
           </select>
+
+          <button onClick="selectAll();">Select All</button>
 
           <label for="from">From</label>
           <input id="from" type="datetime-local" class="checkmateFormEditField" />
@@ -65,5 +62,15 @@
     </div>
   </div>
 </body>
+<script type="text/javascript">
+function selectAll()
+{
+options = document.getElementsByTagName("option");
+for ( i=0; i<options.length; i++)
+{
+  options[i].selected = "true";
+}
+}
+</script>
 
 </html>

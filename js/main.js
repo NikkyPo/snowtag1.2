@@ -222,8 +222,6 @@ geotab.addin.snowtag = () => {
           return;
         }
 
-        allvehicles.options[allvehicles.options.length] = new Option('Select all vehicles', 'allvehicles');
-
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
@@ -232,6 +230,8 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           elVehicleSelect.add(option);
         });
+
+
 
 
       }, errorHandler);
