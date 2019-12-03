@@ -227,9 +227,15 @@ geotab.addin.snowtag = () => {
         vehicles.forEach(vehicle => {
           let option = document.createElement("input")
           option.setAttribute('type', 'checkbox')
-          option.text = vehicle.name;
+          option.name = vehicle.name;
           option.value = vehicle.id;
+
+          var label = document.createElement('label')
+          label.htmlFor = "vehicles";
+          label.appendChild(document.createTextNode('text for label after checkbox'));
+
           elVehicleSelect.appendChild(option);
+          elVehicleSelect.appendChild(label);
         });
 
 
