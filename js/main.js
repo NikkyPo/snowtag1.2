@@ -231,10 +231,8 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
 
           var label = vehicle.name;
-          label.appendChild(document.createTextNode(option.name));
-
           elVehicleSelect.appendChild(option);
-          elVehicleSelect.appendChild(label);
+          elVehicleSelect.insertAdjacentText(label);
         });
 
 
