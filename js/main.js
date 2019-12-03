@@ -135,16 +135,6 @@ geotab.addin.snowtag = () => {
 
     snowMapLayer = L.layerGroup().addTo(map);
 
-    function selectAll()
-    {
-    options = document.getElementsByTagName("option");
-    for ( i=0; i<options.length; i++)
-    {
-      options[i].selected = "true";
-    }
-    console.log(options.value)
-    }
-
     // find reused elements
     allvehicles = document.getElementById('allvehicles');
     elVehicleSelect = document.getElementById('vehicles');
@@ -241,7 +231,15 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.add(option);
         });
 
-
+        function selectAll()
+        {
+        options = document.getElementsByTagName("option");
+        for ( i=0; i<options.length; i++)
+        {
+          options[i].selected = "true";
+        }
+        console.log(options.value)
+        }
 
 
       }, errorHandler);
