@@ -42,7 +42,7 @@ geotab.addin.snowtag = () => {
    */
   let displaySnowMap = function () {
     let deviceId = elVehicleSelect.value;
-    console.log(deviceId)
+    console.log(elVehicleSelect)
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
@@ -233,8 +233,8 @@ geotab.addin.snowtag = () => {
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
+          elVehicleSelect.insertAdjacentText('beforeend', '<br>');
         });
-        console.log(elVehicleSelect.value)
 
       }, errorHandler);
 
