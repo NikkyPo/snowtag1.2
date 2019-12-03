@@ -207,9 +207,9 @@ geotab.addin.snowtag = () => {
     },
     focus(freshApi) {
       api = freshApi;
-      while (elVehicleSelect.firstChild) {
-        elVehicleSelect.removeChild(elVehicleSelect.firstChild);
-      }
+      // while (elVehicleSelect.firstChild) {
+      //   elVehicleSelect.removeChild(elVehicleSelect.firstChild);
+      // }
 
       /**Calls special snowtagging group vehicles**/
       api.call('Get', {
@@ -231,9 +231,9 @@ geotab.addin.snowtag = () => {
           option.name = vehicle.name;
           option.value = vehicle.id;
 
-          var label = vehicle.name;
           elVehicleSelect.appendChild(option);
-          elVehicleSelect.insertAdjacentText('beforeend', label);
+          elVehicleSelect.insertAdjacentText('beforeend', option.name);
+          elVehicleSelect.add(option);
         });
 
 
