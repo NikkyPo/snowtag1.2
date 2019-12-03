@@ -234,7 +234,7 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
         });
-        console.log(elVehicleSelect)
+        console.log(elVehicleSelect.value)
 
       }, errorHandler);
 
