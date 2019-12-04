@@ -41,8 +41,8 @@ geotab.addin.snowtag = () => {
    * Displays the snowtags of a vehicle location history
    */
   let displaySnowMap = function () {
-    let deviceId = ids.value;
-    console.log(deviceId)
+    let deviceId = ids;
+    console.log(deviceId, "test")
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
