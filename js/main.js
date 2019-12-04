@@ -240,7 +240,8 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
-          option.onclick = dynamicEvent;
+
+          option.addEventListener("click", dynamicEvent, false);
         });
 
 
