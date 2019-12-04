@@ -172,8 +172,8 @@ geotab.addin.snowtag = () => {
   //     event.preventDefault();
   //     displaySnowMap();
   // }
-    document.getElementById('vehicles').addEventListener('change', event => {
-      console.log(event)
+    document.getElementById('vehicles').addEventListener('onclick', event => {
+      console.log(event.value)
       $('input:checked').each(function() {
         console.log("check");
       });
