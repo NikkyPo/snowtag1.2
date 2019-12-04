@@ -9,7 +9,7 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
-  let option;
+
   let checkboxtest;
   let elVehicleSelect;
   let elDateFromInput;
@@ -162,25 +162,16 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-    for (var i = 0; i < option.length; i++) {
-      var link = links[i];
-      // <li> onclick, runAlert function
-      link.onclick = dynamicEvent;
-    }
 
-    function dynamicEvent() {
-      console.log("event")
-    }
-
-   //  option.addEventListener('onclick', event => {
-   //    console.log("click")
-   //    checkbox();
-   //  });
-   //  function checkbox(){
-   //    console.log("clicky")
-   //    event.preventDefault();
-   //    displaySnowMap();
-   // }
+  //   option.addEventListener('onclick', event => {
+  //     console.log("click")
+  //     checkbox();
+  //   });
+  //   function checkbox(){
+  //     console.log("clicky")
+  //     event.preventDefault();
+  //     displaySnowMap();
+  // }
 
     document.getElementById('from').addEventListener('change', event => {
       event.preventDefault();
