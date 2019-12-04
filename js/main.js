@@ -42,7 +42,6 @@ geotab.addin.snowtag = () => {
    */
   let displaySnowMap = function () {
     let deviceId = elVehicleSelect.value;
-    console.log(elVehicleSelect)
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
@@ -163,7 +162,6 @@ geotab.addin.snowtag = () => {
 
     // events
     document.getElementById('vehicles').addEventListener('change', event => {
-      console.log(elVehicleSelect)
       event.preventDefault();
       displaySnowMap();
     });
@@ -231,6 +229,7 @@ geotab.addin.snowtag = () => {
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
           option.value = vehicle.id;
+          option.id = 'check'
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
