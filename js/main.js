@@ -172,8 +172,10 @@ geotab.addin.snowtag = () => {
   //     event.preventDefault();
   //     displaySnowMap();
   // }
-    document.getElementById('vehicles').addEventListener('change', event => {
-      $("#check:checked").length;
+    document.getElementById('vehicles').addEventListener('click', event => {
+      $('input:checked').each(function() {
+        console.log("check");
+      });
       event.preventDefault();
       displaySnowMap();
     });
