@@ -161,10 +161,12 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
+    if(elVehicleSelect){
     document.getElementById('check').addEventListener('change', event => {
       event.preventDefault();
       displaySnowMap();
     });
+  }
 
     document.getElementById('from').addEventListener('change', event => {
       event.preventDefault();
