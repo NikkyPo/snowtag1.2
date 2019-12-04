@@ -175,7 +175,7 @@ geotab.addin.snowtag = () => {
     document.getElementById('vehicles').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
-              checkedCbs[i].onchange = function() {
+              checkedCbs[i].addEventListener('change', event => {
                   if (this.checked) {
                     console.log("on")
                     console.log(checkedCbs[i].value)
