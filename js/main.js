@@ -233,7 +233,7 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           option.id = 'check'
 
-          option.addEventListener("check").addEventListener('click', event => {
+          option.getElementById("check").addEventListener('click', event => {
             checkbox();
           });
 
