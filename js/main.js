@@ -9,7 +9,8 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
-  let allvehicles;
+
+  let checkboxtest;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -42,7 +43,6 @@ geotab.addin.snowtag = () => {
    */
   let displaySnowMap = function () {
     let deviceId = elVehicleSelect.value;
-    console.log(option.value)
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
