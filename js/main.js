@@ -238,7 +238,7 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
 
-          option.addEventListener('click', event => {
+          option.addEventListener('onclick', event => {
             checkbox();
           });
         });
