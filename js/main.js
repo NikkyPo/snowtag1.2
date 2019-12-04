@@ -42,7 +42,7 @@ geotab.addin.snowtag = () => {
    */
   let displaySnowMap = function () {
     let deviceId = ids;
-    console.log(deviceId, "testing")
+    console.log(deviceId, "test")
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
@@ -95,7 +95,7 @@ geotab.addin.snowtag = () => {
            }
        }, logRecords => {
          /**Removes previous layers before adding new ones**/
-         snowMapLayer.clearLayers();
+         // snowMapLayer.clearLayers();
          coordinates.push({
            lat: logRecords[0].latitude,
            lon: logRecords[0].longitude,
@@ -174,15 +174,22 @@ geotab.addin.snowtag = () => {
   // }
     document.getElementById('vehicles').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      if(checkedCbs.checked == true){
-        ids = checkedCbs[0].value;
-        event.preventDefault();
-        displaySnowMap();
-      } else {
-        snowMapLayer.clearLayers();
+      if(checkedCbs[0].addEventListener){
+        console.log("here1");
+        for (var i = 0; i < checkedCbs.length; i++) {
+          checkedCbs[i].addEventListener("change", displaySnowMap, false)
+        }
+      } else if (checkedCbs[0].attachEvent) {
+        console.log("here 2")
+        for (var i = 0; i < checkedCbs.length; i++){
+          checkedCbs[i].attachEvent("onchange", displaySnowMap)
+        }
       }
+      // ids = checkedCbs[0].value;
       // for (var i = 0; i < checkedCbs.length; i++) ids.push(checkedCbs[i].value);
       // console.log(ids)
+      // event.preventDefault();
+      // displaySnowMap();
     });
 
     document.getElementById('from').addEventListener('change', event => {
