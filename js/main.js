@@ -208,9 +208,9 @@ geotab.addin.snowtag = () => {
     },
     focus(freshApi) {
       api = freshApi;
-      // while (elVehicleSelect.firstChild) {
-      //   elVehicleSelect.removeChild(elVehicleSelect.firstChild);
-      // }
+      while (elVehicleSelect.firstChild) {
+        elVehicleSelect.removeChild(elVehicleSelect.firstChild);
+      }
 
       /**Calls special snowtagging group vehicles**/
       api.call('Get', {
