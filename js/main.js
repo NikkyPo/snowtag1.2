@@ -176,13 +176,13 @@ geotab.addin.snowtag = () => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
-                  if (!checkedCbs.checked) {
+                  if (!checkedCbs[i].checked) {
                     console.log("passes")
                     ids = checkedCbs[i].value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("off")
+                      console.log("turn off")
                       snowMapLayer.clearLayers();
                   }
               }
@@ -203,36 +203,17 @@ geotab.addin.snowtag = () => {
 
     document.getElementById('from').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      for (var i=0; i < checkedCbs.length; i++) {
-              checkedCbs[i].onchange = function() {
-                  if (!checkedCbs.checked) {
-                    console.log("passes")
-                    ids = checkedCbs[i].value;
-                    event.preventDefault();
-                    displaySnowMap();
-                  } else {
-                      console.log("off")
-                      snowMapLayer.clearLayers();
-                  }
-              }
-      }
+      ids = checkedCbs[0].value;
+      event.preventDefault();
+      displaySnowMap();
     });
 
     document.getElementById('to').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      for (var i=0; i < checkedCbs.length; i++) {
-              checkedCbs[i].onchange = function() {
-                  if (!checkedCbs.checked) {
-                    console.log("passes")
-                    ids = checkedCbs[i].value;
-                    event.preventDefault();
-                    displaySnowMap();
-                  } else {
-                      console.log("off")
-                      snowMapLayer.clearLayers();
-                  }
-              }
-      }
+      ids = checkedCbs[0].value;
+      event.preventDefault();
+      displaySnowMap();
+    });
   };
 
 
