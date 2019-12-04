@@ -177,14 +177,14 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                 console.log("hi")
-                  // if (this.checked) {
-                  //   console.log("passes")
-                  //   ids = checkedCbs[i].value;
-                  //   event.preventDefault();
-                  //   displaySnowMap();
-                  // } else {
-                  //     snowMapLayer.clearLayers();
-                  // }
+                  if (checkedCbs[i].checked) {
+                    console.log("passes")
+                    ids = checkedCbs[i].value;
+                    event.preventDefault();
+                    displaySnowMap();
+                  } else {
+                      snowMapLayer.clearLayers();
+                  }
               }
       }
 
