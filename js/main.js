@@ -232,16 +232,14 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           option.id = 'check'
 
-          option.addEventListener("change", dynamicEvent, false);
+          document.getElementById('check').addEventListener('change', event => {
+            event.preventDefault();
+            displaySnowMap();
+          });
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
-
-          function dynamicEvent() {
-            this.innerHTML = 'Dynamic event success.';
-            this.className += ' dynamic-success';
-          }
         });
 
       }, errorHandler);
