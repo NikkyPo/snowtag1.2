@@ -179,18 +179,18 @@ geotab.addin.snowtag = () => {
       // console.log(ids)
       event.preventDefault();
       displaySnowMap();
-    });
 
-    document.getElementById('from').addEventListener('change', event => {
-      event.preventDefault();
-      displaySnowMap();
-    });
+      document.getElementById('from').addEventListener('change', event => {
+        event.preventDefault();
+        displaySnowMap();
+      });
 
-    document.getElementById('to').addEventListener('change', event => {
-      event.preventDefault();
-      displaySnowMap();
+      document.getElementById('to').addEventListener('change', event => {
+        event.preventDefault();
+        displaySnowMap();
+      });
+    };      
     });
-  };
 
 
   /**
