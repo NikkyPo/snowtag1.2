@@ -177,7 +177,7 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                 console.log("hi there")
-                  if (checkedCbs[i].checked) {
+                  if (checkedCbs.checked) {
                     console.log("passes")
                     ids = checkedCbs[i].value;
                     event.preventDefault();
