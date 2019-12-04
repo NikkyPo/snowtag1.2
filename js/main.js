@@ -172,6 +172,11 @@ geotab.addin.snowtag = () => {
   //     event.preventDefault();
   //     displaySnowMap();
   // }
+    document.getElementById('vehicle').addEventListener('change', event => {
+      console.log("change")
+      event.preventDefault();
+      displaySnowMap();
+    });
 
     document.getElementById('from').addEventListener('change', event => {
       event.preventDefault();
