@@ -183,7 +183,9 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
                   } else {
                       console.log("off")
-                      snowMapLayer.removeLayer(ids);
+                      ids = null;
+                      event.preventDefault();
+                      displaySnowMap();
                   }
               }
       }
