@@ -162,10 +162,10 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-    document.getElementById('vehicles').addEventListener('change', event => {
-      event.preventDefault();
-      displaySnowMap();
-    });
+    // document.getElementById('vehicles').addEventListener('change', event => {
+    //   event.preventDefault();
+    //   displaySnowMap();
+    // });
 
     document.getElementById('from').addEventListener('change', event => {
       event.preventDefault();
