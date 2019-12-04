@@ -237,13 +237,12 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           option.id = 'check'
 
+          option.addEventListener("click", dynamicEvent, false);
+          
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
-
-          option.addEventListener("click", dynamicEvent, false);
         });
-
 
       }, errorHandler);
 
