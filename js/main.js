@@ -176,13 +176,13 @@ geotab.addin.snowtag = () => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
-                console.log("hi there")
                   if (!checkedCbs.checked) {
                     console.log("passes")
                     ids = checkedCbs[i].value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
+                      console.log("off")
                       snowMapLayer.clearLayers();
                   }
               }
@@ -205,13 +205,13 @@ geotab.addin.snowtag = () => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
-                console.log("hi there")
                   if (!checkedCbs.checked) {
                     console.log("passes")
                     ids = checkedCbs[i].value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
+                      console.log("off")
                       snowMapLayer.clearLayers();
                   }
               }
@@ -222,13 +222,13 @@ geotab.addin.snowtag = () => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
-                console.log("hi there")
                   if (!checkedCbs.checked) {
                     console.log("passes")
                     ids = checkedCbs[i].value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
+                      console.log("off")
                       snowMapLayer.clearLayers();
                   }
               }
