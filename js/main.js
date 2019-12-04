@@ -211,6 +211,11 @@ geotab.addin.snowtag = () => {
         elVehicleSelect.removeChild(elVehicleSelect.firstChild);
       }
 
+      function dynamicEvent() {
+        this.innerHTML = 'Dynamic event success.';
+        this.className += ' dynamic-success';
+      }
+
       /**Calls special snowtagging group vehicles**/
       api.call('Get', {
         typeName: 'Device',
@@ -235,6 +240,8 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
+
+          option.onclick = dynamicEvent;
         });
 
       }, errorHandler);
