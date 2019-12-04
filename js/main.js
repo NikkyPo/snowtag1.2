@@ -178,11 +178,6 @@ geotab.addin.snowtag = () => {
     });
   };
 
-  function dynamicEvent() {
-    this.innerHTML = 'Dynamic event success.';
-    this.className += ' dynamic-success';
-  }
-
   /**
    * Sort named entities
    * @param {object} a - The left comparison named entity
@@ -238,10 +233,15 @@ geotab.addin.snowtag = () => {
           option.id = 'check'
 
           option.addEventListener("click", dynamicEvent, false);
-          
+
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
+
+          function dynamicEvent() {
+            this.innerHTML = 'Dynamic event success.';
+            this.className += ' dynamic-success';
+          }
         });
 
       }, errorHandler);
