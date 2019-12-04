@@ -137,7 +137,7 @@ geotab.addin.snowtag = () => {
 
 
     // find reused elements
-    elVehicleSelect = document.getElementById('check');
+    elVehicleSelect = document.getElementById('vehicles');
     elDateFromInput = document.getElementById('from');
     elDateToInput = document.getElementById('to');
     elError = document.getElementById('error');
@@ -161,12 +161,10 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-    if(document.getElementById('check')){
-    document.getElementById('check').addEventListener('change', event => {
+    document.getElementById('vehicles').addEventListener('change', event => {
       event.preventDefault();
       displaySnowMap();
     });
-  }
 
     document.getElementById('from').addEventListener('change', event => {
       event.preventDefault();
