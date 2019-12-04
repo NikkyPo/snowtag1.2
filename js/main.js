@@ -9,8 +9,7 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
-
-  let checkboxtest;
+  let ids;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -174,18 +173,12 @@ geotab.addin.snowtag = () => {
   // }
     document.getElementById('vehicles').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      var ids = [];
+      ids = [];
       for (var i = 0; i < checkedCbs.length; i++) ids.push(checkedCbs[i].value);
 
       console.log(ids)
       event.preventDefault();
       displaySnowMap();
-      // console.log(elVehicleSelect)
-      // $('input:checked').each(function() {
-      //   console.log("check");
-      // });
-      // event.preventDefault();
-      // displaySnowMap();
     });
 
     document.getElementById('from').addEventListener('change', event => {
