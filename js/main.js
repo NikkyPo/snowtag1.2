@@ -232,7 +232,7 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           option.id = 'check'
 
-          document.getElementById('check').addEventListener('change', event => {
+          option.addEventListener('change', event => {
             event.preventDefault();
             displaySnowMap();
           });
