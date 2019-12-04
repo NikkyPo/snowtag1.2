@@ -180,17 +180,22 @@ geotab.addin.snowtag = () => {
       event.preventDefault();
       displaySnowMap();
 
-      document.getElementById('from').addEventListener('change', event => {
-        event.preventDefault();
-        displaySnowMap();
-      });
-
-      document.getElementById('to').addEventListener('change', event => {
-        event.preventDefault();
-        displaySnowMap();
-      });
-    };      
     });
+
+    document.getElementById('from').addEventListener('change', event => {
+      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
+      ids = checkedCbs[0].value;
+      event.preventDefault();
+      displaySnowMap();
+    });
+
+    document.getElementById('to').addEventListener('change', event => {
+      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
+      ids = checkedCbs[0].value;
+      event.preventDefault();
+      displaySnowMap();
+    });
+  };
 
 
   /**
