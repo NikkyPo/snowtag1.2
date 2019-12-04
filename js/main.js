@@ -9,7 +9,7 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
-  let checkedCbs
+  let ids;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -41,7 +41,7 @@ geotab.addin.snowtag = () => {
    * Displays the snowtags of a vehicle location history
    */
   let displaySnowMap = function () {
-    let deviceId = checkedCbs;
+    let deviceId = ids;
     console.log(deviceId, "test")
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
@@ -173,23 +173,12 @@ geotab.addin.snowtag = () => {
   //     displaySnowMap();
   // }
     document.getElementById('vehicles').addEventListener('change', event => {
-      checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      if(checkedCbs[0].addEventListener){
-        console.log("here1");
-        for (var i = 0; i < checkedCbs.length; i++) {
-          checkedCbs[i].addEventListener("onchange", displaySnowMap, false)
-        }
-      } else if (checkedCbs[0].attachEvent) {
-        console.log("here 2")
-        for (var i = 0; i < checkedCbs.length; i++){
-          checkedCbs[i].attachEvent("change", displaySnowMap)
-        }
-      }
-      // ids = checkedCbs[0].value;
+      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
+      ids = checkedCbs[0].value;
       // for (var i = 0; i < checkedCbs.length; i++) ids.push(checkedCbs[i].value);
       // console.log(ids)
-      // event.preventDefault();
-      // displaySnowMap();
+      event.preventDefault();
+      displaySnowMap();
     });
 
     document.getElementById('from').addEventListener('change', event => {
@@ -256,7 +245,7 @@ geotab.addin.snowtag = () => {
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
           option.value = vehicle.id;
-          option.id = 'check'
+          option.class = 'check'
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
