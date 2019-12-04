@@ -162,13 +162,8 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-    document.getElementById('vehicles').addEventListener('CheckboxStateChange', event => {
-      var checkbox = event.target;
-      if(checkbox.checked){
-        console.log("checked")
-      } else {
-        console.log("not checked")
-      }
+    document.getElementById('vehicles').addEventListener('change', event => {
+      console.log(elVehicleSelect)
       event.preventDefault();
       displaySnowMap();
     });
