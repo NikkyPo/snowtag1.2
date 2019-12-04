@@ -177,12 +177,12 @@ geotab.addin.snowtag = () => {
       if(checkedCbs[0].addEventListener){
         console.log("here1");
         for (var i = 0; i < checkedCbs.length; i++) {
-          checkedCbs[i].addEventListener("change", displaySnowMap, false)
+          checkedCbs[i].addEventListener("onchange", displaySnowMap, false)
         }
       } else if (checkedCbs[0].attachEvent) {
         console.log("here 2")
         for (var i = 0; i < checkedCbs.length; i++){
-          checkedCbs[i].attachEvent("onchange", displaySnowMap)
+          checkedCbs[i].attachEvent("change", displaySnowMap)
         }
       }
       // ids = checkedCbs[0].value;
