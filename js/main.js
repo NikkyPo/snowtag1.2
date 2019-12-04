@@ -162,10 +162,10 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-    // document.getElementById('vehicles').addEventListener('change', event => {
-    //   event.preventDefault();
-    //   displaySnowMap();
-    // });
+    function checkbox(){
+      event.preventDefault();
+      displaySnowMap();
+  }
 
     document.getElementById('from').addEventListener('change', event => {
       event.preventDefault();
@@ -177,6 +177,7 @@ geotab.addin.snowtag = () => {
       displaySnowMap();
     });
   };
+
 
   /**
    * Sort named entities
@@ -232,9 +233,8 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           option.id = 'check'
 
-          option.addEventListener('change', event => {
-            event.preventDefault();
-            displaySnowMap();
+          option.addEventListener("click").addEventListener('change', event => {
+            checkbox();
           });
 
           elVehicleSelect.appendChild(option);
