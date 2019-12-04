@@ -9,7 +9,7 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
-  let ids;
+  let checkedCbs
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -41,7 +41,7 @@ geotab.addin.snowtag = () => {
    * Displays the snowtags of a vehicle location history
    */
   let displaySnowMap = function () {
-    let deviceId = ids;
+    let deviceId = checkedCbs;
     console.log(deviceId, "test")
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
@@ -173,7 +173,7 @@ geotab.addin.snowtag = () => {
   //     displaySnowMap();
   // }
     document.getElementById('vehicles').addEventListener('change', event => {
-      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
+      checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
       if(checkedCbs[0].addEventListener){
         console.log("here1");
         for (var i = 0; i < checkedCbs.length; i++) {
