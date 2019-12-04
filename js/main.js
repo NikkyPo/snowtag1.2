@@ -163,7 +163,7 @@ geotab.addin.snowtag = () => {
 
     // events
     function checkbox(){
-      alert("click")
+      console.log("clicky")
       event.preventDefault();
       displaySnowMap();
   }
@@ -239,6 +239,7 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
 
           option.addEventListener('onclick', event => {
+            console.log("click")
             checkbox();
           });
         });
