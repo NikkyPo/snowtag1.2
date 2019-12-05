@@ -49,7 +49,7 @@ geotab.addin.snowtag = () => {
     errorHandler('');
 
     if ((deviceId === null) || (fromValue === '') || (toValue === '')) {
-      snowMapLayer.removeLayer(deviceId)
+      consoel.log(snowMapLayer)
       return;
     }
 
