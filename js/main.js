@@ -176,7 +176,7 @@ geotab.addin.snowtag = () => {
                   } else {
                       console.log("off")
                       ids = this.value;
-                      console.log("points on map", snowMapLayer)
+                      console.log("points on map", coordinates)
                       event.preventDefault();
                       displaySnowMap();
                   }
