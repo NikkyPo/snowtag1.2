@@ -42,14 +42,14 @@ geotab.addin.snowtag = () => {
    */
   let displaySnowMap = function () {
     let deviceId = ids;
-    console.log(deviceId, "test")
+    console.log(deviceId, "testing")
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
     errorHandler('');
 
     if ((deviceId === null) || (fromValue === '') || (toValue === '')) {
-      consoel.log(snowMapLayer)
+      console.log(snowMapLayer)
       return;
     }
 
