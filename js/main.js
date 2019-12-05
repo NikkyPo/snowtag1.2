@@ -138,6 +138,8 @@ geotab.addin.snowtag = () => {
     var credits = L.control.attribution().addTo(map);
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
+    snowMapLayer = L.layerGroup().addTo(map);
+
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
@@ -253,10 +255,6 @@ geotab.addin.snowtag = () => {
         }
 
         vehicles.sort(sortByName);
-
-        for(var i=0; i < vehicles.length; ++1){
-          snowMapLayer[i] = L.layerGroup().addTo(map);
-        }
 
         vehicles.forEach(vehicle => {
           option = document.createElement("input")
