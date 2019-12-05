@@ -254,14 +254,16 @@ geotab.addin.snowtag = () => {
 
         vehicles.sort(sortByName);
 
+        for(var i=0; i < vehicles.length; ++1){
+          snowMapLayer[i] = L.layerGroup().addTo(map);
+        }
+
         vehicles.forEach(vehicle => {
           option = document.createElement("input")
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
           option.value = vehicle.id;
           option.class = 'check'
-
-          snowMapLayer[vehicle] = L.layerGroup().addTo(map);
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
