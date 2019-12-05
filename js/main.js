@@ -49,7 +49,6 @@ geotab.addin.snowtag = () => {
     errorHandler('');
 
     if ((deviceId === null) || (fromValue === '') || (toValue === '')) {
-      console.log(snowMapLayer)
       return;
     }
 
@@ -175,7 +174,8 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
                   } else {
                       console.log("off")
-                      ids = null;
+                      ids = this.value;
+                      console.log(snowMapLayer)
                       event.preventDefault();
                       displaySnowMap();
                   }
