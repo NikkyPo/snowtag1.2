@@ -163,15 +163,6 @@ geotab.addin.snowtag = () => {
 
     // events
 
-  //   option.addEventListener('onclick', event => {
-  //     console.log("click")
-  //     checkbox();
-  //   });
-  //   function checkbox(){
-  //     console.log("clicky")
-  //     event.preventDefault();
-  //     displaySnowMap();
-  // }
     document.getElementById('vehicles').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
@@ -183,9 +174,10 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
                   } else {
                       console.log("off")
-                      ids = null;
-                      event.preventDefault();
-                      displaySnowMap();
+                      ids = this.value;
+                      map.removeLayer(ids);
+                      // event.preventDefault();
+                      // displaySnowMap();
                   }
               }
       }
