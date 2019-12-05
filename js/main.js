@@ -179,15 +179,18 @@ geotab.addin.snowtag = () => {
                   } else {
                       console.log("off")
                       ids = this.value;
-                      for(var i=0; i < coordinates.length; i++){
-                        if(coordinates[i].id == ids){
-                          console.log("ids deleted")
-                          coordinates.removeLayer(ids)
-                        } else {
-                          errorHandler("There has been an error, please reload the page")
-                          toggleLoading(false);
-                        }
-                      }
+                      map.eachLayer(function(layer){
+                        console.log(layer)
+                      })
+                      // for(var i=0; i < coordinates.length; i++){
+                      //   if(coordinates[i].id == ids){
+                      //     console.log("ids deleted")
+                      //     coordinates.removeLayer(ids)
+                      //   } else {
+                      //     errorHandler("There has been an error, please reload the page")
+                      //     toggleLoading(false);
+                      //   }
+                      // }
                       // event.preventDefault();
                       // displaySnowMap();
                   }
