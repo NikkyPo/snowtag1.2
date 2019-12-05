@@ -13,6 +13,7 @@ geotab.addin.snowtag = () => {
   let coordinates;
   let bounds;
   let ids;
+  let option;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -45,7 +46,6 @@ geotab.addin.snowtag = () => {
    */
   let displaySnowMap = function () {
     let deviceId = ids;
-    console.log(deviceId, "testing")
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
@@ -138,8 +138,6 @@ geotab.addin.snowtag = () => {
     var credits = L.control.attribution().addTo(map);
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
-    snowMapLayer = L.layerGroup().addTo(map);
-
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
@@ -182,19 +180,15 @@ geotab.addin.snowtag = () => {
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
                           console.log("ids removed")
-                          console.log(map._layers)
                           map.removeLayer(ids)
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
                         }
                       }
-                      // event.preventDefault();
-                      // displaySnowMap();
                   }
               }
       }
-
     });
 
     document.getElementById('from').addEventListener('change', event => {
@@ -261,11 +255,13 @@ geotab.addin.snowtag = () => {
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
-          let option = document.createElement("input")
+          option = document.createElement("input")
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
           option.value = vehicle.id;
           option.class = 'check'
+
+          snowMapLayer[vehicle] = L.layerGroup().addTo(map);
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
