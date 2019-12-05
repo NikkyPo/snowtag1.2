@@ -179,7 +179,12 @@ geotab.addin.snowtag = () => {
                   } else {
                       console.log("off")
                       ids = this.value;
-                      console.log("points on map", coordinates)
+                      for(var i=0; i < coordinates.length; i++){
+                        if(coordinates[i].id == ids)
+                        console.log("ids exists")
+                      } else {
+                        console.log("id does not exist")
+                      }
                       event.preventDefault();
                       displaySnowMap();
                   }
