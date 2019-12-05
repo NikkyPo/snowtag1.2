@@ -180,9 +180,9 @@ geotab.addin.snowtag = () => {
                       console.log("off")
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
-                        if(coordinates[i]._id == ids){
-                          console.log("ids removed")
-                          map.removeLayer(ids)
+                        if(coordinates[i].id == ids){
+                          console.log("ids deleted")
+                          coordinates.removeLayer(ids)
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
