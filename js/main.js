@@ -9,6 +9,9 @@ geotab.addin.snowtag = () => {
   let map;
   let snowMapLayer;
 
+
+  let coordinates;
+  let bounds;
   let ids;
   let elVehicleSelect;
   let elDateFromInput;
@@ -72,8 +75,8 @@ geotab.addin.snowtag = () => {
                "toDate": dateTo
          }
        }, function(exception) {
-         let coordinates = [];
-         let bounds = [];
+         coordinates = [];
+         bounds = [];
           if (exception.length === 0) {
             errorHandler('Not enough data');
             toggleLoading(false);
@@ -182,17 +185,6 @@ geotab.addin.snowtag = () => {
                   }
               }
       }
-
-
-      // if (checkedCbs[0].value) {
-      //   console.log("passes")
-      //   ids = checkedCbs[0].value;
-      //   event.preventDefault();
-      //   displaySnowMap();
-      // }
-
-      // for (var i = 0; i < checkedCbs.length; i++) ids.push(checkedCbs[i].value);
-      // console.log(ids)
 
     });
 
