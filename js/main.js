@@ -94,7 +94,7 @@ geotab.addin.snowtag = () => {
                }
            }
        }, logRecords => {
-         console.log(logRecords)
+         console.log(logRecords[0].device)
          /**Removes previous layers before adding new ones**/
          // snowMapLayer.clearLayers();
          coordinates.push({
