@@ -181,9 +181,11 @@ geotab.addin.snowtag = () => {
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
-                          console.log("ids exists")
+                          console.log("ids exists and is removed")
+                          snowMapLayer.removeLayer(ids)
                         } else {
-                          console.log("id does not exist")
+                          errorHandler("There has been an error, please reload the page")
+                          toggleLoading(false);
                         }
                       }
                       event.preventDefault();
