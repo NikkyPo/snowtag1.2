@@ -180,10 +180,11 @@ geotab.addin.snowtag = () => {
                       console.log("off")
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
-                        if(coordinates[i].id == ids)
-                        console.log("ids exists")
-                      } else {
-                        console.log("id does not exist")
+                        if(coordinates[i].id == ids){
+                          console.log("ids exists")
+                        } else {
+                          console.log("id does not exist")
+                        }
                       }
                       event.preventDefault();
                       displaySnowMap();
