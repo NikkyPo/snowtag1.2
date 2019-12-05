@@ -49,6 +49,7 @@ geotab.addin.snowtag = () => {
     errorHandler('');
 
     if ((deviceId === null) || (fromValue === '') || (toValue === '')) {
+      snowMapLayer.removeLayer(deviceId)
       return;
     }
 
@@ -107,7 +108,7 @@ geotab.addin.snowtag = () => {
            console.log("new leaflet",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon]).addTo(snowMapLayer)
+             var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
              snowMapLayer.addLayer(newCoords)
          		}
              toggleLoading(false);
@@ -174,10 +175,9 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
                   } else {
                       console.log("off")
-                      ids = this.value;
-                      snowMapLayer.removeLayer(ids)
-                      // event.preventDefault();
-                      // displaySnowMap();
+                      ids = null;
+                      event.preventDefault();
+                      displaySnowMap();
                   }
               }
       }
