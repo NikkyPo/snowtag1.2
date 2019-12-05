@@ -180,7 +180,7 @@ geotab.addin.snowtag = () => {
                       console.log("off")
                       ids = this.value;
                       map.eachLayer(function(layer){
-                        console.log(layer)
+                        console.log(map.layer)
                       })
                       // for(var i=0; i < coordinates.length; i++){
                       //   if(coordinates[i].id == ids){
