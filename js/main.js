@@ -113,6 +113,7 @@ geotab.addin.snowtag = () => {
              map.fitBounds(bounds);
              var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
              snowMapLayer.addLayer(newCoords)
+             console.log(snowMapLayer._layers)
          		}
              toggleLoading(false);
            }
