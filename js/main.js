@@ -111,7 +111,7 @@ geotab.addin.snowtag = () => {
            console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             var newCoords[coordinates.id] = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+             var newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                color: "red",
                fillColor: "#f03",
                fillOpacity: 0.5,
@@ -186,7 +186,7 @@ geotab.addin.snowtag = () => {
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
-                          console.log("ids removed", coordinates[i].id)
+                          console.log("ids removed")
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
