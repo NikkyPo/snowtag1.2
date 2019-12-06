@@ -111,9 +111,13 @@ geotab.addin.snowtag = () => {
            console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             var newCoords = L.marker([coordinates[i].lat,coordinates[i].lon])
+             var newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+               color: "red",
+               fillColor: "#f03",
+               fillOpacity: 0.5,
+               radius: 50.0
+             })
              snowMapLayer.addLayer(newCoords)
-             console.log(snowMapLayer._layers)
          		}
              toggleLoading(false);
            }
