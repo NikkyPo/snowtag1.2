@@ -121,6 +121,7 @@ geotab.addin.snowtag = () => {
                radius: 5.0
              })
              newLayer.addLayer(newCoords)
+             console.log(newLayer)
          		}
              toggleLoading(false);
            }
