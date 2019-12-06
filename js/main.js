@@ -50,7 +50,7 @@ geotab.addin.snowtag = () => {
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
     newLayer = ids;
-    newLayer = L.layerGroup().addTo(map);
+    console.log(newLayer)
 
     errorHandler('');
 
@@ -147,6 +147,7 @@ geotab.addin.snowtag = () => {
     var credits = L.control.attribution().addTo(map);
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
+    newLayer = L.layerGroup().addTo(map);
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
