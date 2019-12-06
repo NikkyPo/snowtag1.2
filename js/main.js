@@ -48,6 +48,7 @@ geotab.addin.snowtag = () => {
     let deviceId = ids;
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
+    snowMapLayer = L.layerGroup().addTo(map);
 
     errorHandler('');
 
@@ -115,7 +116,7 @@ geotab.addin.snowtag = () => {
                color: "red",
                fillColor: "#f03",
                fillOpacity: 0.5,
-               radius: 50.0
+               radius: 5.0
              })
              snowMapLayer.addLayer(newCoords)
          		}
@@ -142,8 +143,6 @@ geotab.addin.snowtag = () => {
     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2VvdGFiIiwiYSI6ImNpd2NlaW02MjAxc28yeW9idTR3dmRxdTMifQ.ZH0koA2g2YMMBOcx6EYbwQ').addTo(map);
     var credits = L.control.attribution().addTo(map);
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
-
-    snowMapLayer = L.layerGroup().addTo(map);
 
 
     // find reused elements
@@ -186,8 +185,8 @@ geotab.addin.snowtag = () => {
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
+
                           console.log("ids removed")
-                          map.removeLayer(ids)
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
