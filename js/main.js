@@ -13,7 +13,6 @@ geotab.addin.snowtag = () => {
   let coordinates;
   let bounds;
   let ids;
-  let newLayer;
   let option;
   let elVehicleSelect;
   let elDateFromInput;
@@ -49,8 +48,6 @@ geotab.addin.snowtag = () => {
     let deviceId = ids;
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
-    newLayer = ids;
-    console.log(newLayer)
 
     errorHandler('');
 
@@ -114,14 +111,13 @@ geotab.addin.snowtag = () => {
            console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             var newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+             var newCoords[coordinates.id] = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                color: "red",
                fillColor: "#f03",
                fillOpacity: 0.5,
                radius: 5.0
              })
-             newLayer.addLayer(newCoords)
-             console.log(newLayer)
+             snowMapLayer.addLayer(newCoords)
          		}
              toggleLoading(false);
            }
@@ -147,7 +143,8 @@ geotab.addin.snowtag = () => {
     var credits = L.control.attribution().addTo(map);
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
-    newLayer = L.layerGroup().addTo(map);
+    snowMapLayer = L.layerGroup().addTo(map);
+
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
@@ -189,8 +186,7 @@ geotab.addin.snowtag = () => {
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
-
-                          console.log("ids removed")
+                          console.log("ids removed", coordinates[i].id)
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
