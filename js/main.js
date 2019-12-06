@@ -13,6 +13,7 @@ geotab.addin.snowtag = () => {
   let coordinates;
   let bounds;
   let ids;
+  let newLayer;
   let option;
   let elVehicleSelect;
   let elDateFromInput;
@@ -48,7 +49,8 @@ geotab.addin.snowtag = () => {
     let deviceId = ids;
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
-    snowMapLayer = L.layerGroup().addTo(map);
+    newLayer = ids;
+    newLayer = L.layerGroup().addTo(map);
 
     errorHandler('');
 
@@ -118,7 +120,7 @@ geotab.addin.snowtag = () => {
                fillOpacity: 0.5,
                radius: 5.0
              })
-             snowMapLayer.addLayer(newCoords)
+             newLayer.addLayer(newCoords)
          		}
              toggleLoading(false);
            }
