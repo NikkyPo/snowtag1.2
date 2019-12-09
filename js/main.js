@@ -186,20 +186,31 @@ geotab.addin.snowtag = () => {
                   } else {
                       console.log("off")
                       ids = this.value;
-                      for(var i=0; i < coordinates.length; i++){
-                        if(newCoords.options.uniqueID == ids){
-                          console.log("ids removed", coordinates[i].id)
-                          console.log("newCoords", newCoords.options.uniqueID)
-                          // snowMapLayer.removeLayer(newCoords)
-                        } else {
-                          errorHandler("There has been an error, please reload the page")
-                          toggleLoading(false);
+                      snowMapLayer.eachLayer((layer) => {
+                        console.log("working", layer)
+                        if (ids === layer.options.uniqueID) {
+                          newLayerGroup.removeLayer(layer);
                         }
+                      });
+
+
+                      // ids = this.value;
+                      // for(var i=0; i < coordinates.length; i++){
+                      //   if(newCoords.options.uniqueID === ids){
+                      //     console.log("ids removed", coordinates[i].id)
+                      //     console.log("newCoords", newCoords.options.uniqueID)
+                      //     // snowMapLayer.removeLayer(newCoords)
+                      //   } else {
+                      //     errorHandler("There has been an error, please reload the page")
+                      //     toggleLoading(false);
+                      //   }
                       }
                   }
               }
       }
     });
+
+
 
     document.getElementById('from').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
