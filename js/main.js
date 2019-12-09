@@ -186,7 +186,8 @@ geotab.addin.snowtag = () => {
                   } else {
                       console.log("off")
                       ids = this.value;
-                        if(newCoords.options.uniqueID === ids){
+                      for(var i=0; i < coordinates.length; i++){
+                        if(newCoords.options.uniqueID == ids){
                           console.log("ids removed", coordinates[i].id)
                           console.log("newCoords", newCoords.options.uniqueID)
                           // snowMapLayer.removeLayer(newCoords)
@@ -194,7 +195,7 @@ geotab.addin.snowtag = () => {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
                         }
-
+                      }
                   }
               }
       }
