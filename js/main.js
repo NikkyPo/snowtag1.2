@@ -8,7 +8,6 @@ geotab.addin.snowtag = () => {
 
   let map;
   let snowMapLayer;
-  let bounds;
   let ids;
   let option;
   let newCoords;
@@ -74,9 +73,9 @@ geotab.addin.snowtag = () => {
          }
        }, function(exception) {
          let coordinates = [];
-         bounds = [];
+         let bounds = [];
           if (exception.length === 0) {
-            errorHandler('Not enough data for ', exception);
+            errorHandler('Not enough data for ', exception.deviceId);
             toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
