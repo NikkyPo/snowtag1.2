@@ -189,8 +189,8 @@ geotab.addin.snowtag = () => {
                       ids = this.value;
 
                       snowMapLayer.eachLayer((layer) => {
-                        if (newCoords.options.uniqueID === ids) {
-                          console.log("working", layer)
+                        if (layer.options.uniqueID === ids) {
+                          console.log("working", layer.options.uniqueID)
                         }
                       });
                       // for(var i=0; i < coordinates.length; i++){
