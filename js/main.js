@@ -77,7 +77,7 @@ geotab.addin.snowtag = () => {
          bounds = [];
           if (exception.length === 0) {
             errorHandler('Not enough data for ', exception);
-            // toggleLoading(false);
+            toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
                logRecord(exception[i],coordinates,bounds,exception.length);
