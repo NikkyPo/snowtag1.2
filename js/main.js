@@ -200,7 +200,7 @@ geotab.addin.snowtag = () => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
           console.log("on 2", input)
-          ids = this.value;
+          ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             console.log(layer.options.uniqueID, ids)
             if (layer.options.uniqueID === ids) {
