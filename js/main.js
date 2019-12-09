@@ -206,14 +206,13 @@ geotab.addin.snowtag = () => {
             if (layer.options.uniqueID === ids) {
               console.log("layers off2")
               snowMapLayer.removeLayer(layer)
-              event.preventDefault();
-              displaySnowMap();
             }
           }, error => {
             errorHandler(error);
             toggleLoading(false);
           });
-
+          event.preventDefault();
+          displaySnowMap();
         }
         // else {
         //     console.log("off1")
