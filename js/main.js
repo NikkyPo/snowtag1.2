@@ -190,10 +190,10 @@ geotab.addin.snowtag = () => {
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
                           snowMapLayer.removeLayer(layer)
-                        } else {
-                          errorHandler("There has been an error, please reload the page")
-                          toggleLoading(false);
                         }
+                      }, error => {
+                        errorHandler(error);
+                        toggleLoading(false);
                       });
                   }
               }
