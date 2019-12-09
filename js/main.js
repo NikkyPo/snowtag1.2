@@ -574,14 +574,27 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('to').addEventListener('change', event => {
-      // var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
-      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-          if (input.checked) {
-            console.log("on3")
-            ids = this.value;
-            event.preventDefault();
-            displaySnowMap();
-          }
+      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+      for (var i=0; i < checkedCbs.length; i++) {
+              checkedCbs[i].onchange = function() {
+                  if (this.checked) {
+                    console.log("on3")
+                    ids = this.value;
+                    event.preventDefault();
+                    displaySnowMap();
+                  } else {
+                      console.log("off3")
+                      ids = this.value;
+                      snowMapLayer.eachLayer((layer) => {
+                        if (layer.options.uniqueID === ids) {
+                          snowMapLayer.removeLayer(layer)
+                        }
+                      }, error => {
+                        errorHandler(error);
+                        toggleLoading(false);
+                      });
+                  }
+              }
       }
     });
   };
