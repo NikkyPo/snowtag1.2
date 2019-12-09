@@ -45,8 +45,8 @@ geotab.addin.snowtag = () => {
    * Displays the snowtags of a vehicle location history
    */
   let displaySnowMap = function () {
-    let deviceId = ids;
     let uniqueID = ids;
+    let deviceId = ids;
     let fromValue = elDateFromInput.value;
     let toValue = elDateToInput.value;
 
@@ -112,7 +112,8 @@ geotab.addin.snowtag = () => {
            console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             const newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {uniqueID: uniqueID} {
+             const newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+               uniqueID: uniqueID,
                color: "red",
                fillColor: "#f03",
                fillOpacity: 0.5,
