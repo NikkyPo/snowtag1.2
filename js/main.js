@@ -187,6 +187,7 @@ geotab.addin.snowtag = () => {
                   } else {
                       console.log("offs")
                       ids = this.value;
+                      for(var i=0; i < coordinates.length; i++){
                         if(newCoords.options.uniqueID === ids){
                           // console.log("ids removed", coordinates[i].id)
                           console.log("newCoords", newCoords.options.uniqueID)
@@ -197,6 +198,7 @@ geotab.addin.snowtag = () => {
                           toggleLoading(false);
                         }
                       }
+                  }
               }
       }
     });
