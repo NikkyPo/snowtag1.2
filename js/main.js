@@ -551,25 +551,35 @@ geotab.addin.snowtag = () => {
     document.getElementById('from').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
-              checkedCbs[i].onchange = function() {
-                  if (this.checked) {
-                    console.log("on2")
-                    ids = this.value;
-                    event.preventDefault();
-                    displaySnowMap();
-                  } else {
-                      console.log("off2")
-                      ids = this.value;
-                      snowMapLayer.eachLayer((layer) => {
-                        if (layer.options.uniqueID === ids) {
-                          snowMapLayer.removeLayer(layer)
-                        }
-                      }, error => {
-                        errorHandler(error);
-                        toggleLoading(false);
-                      });
-                  }
-              }
+        if (this.checked) {
+          console.log("on2")
+          ids = this.value;
+
+          snowMapLayer.eachLayer((layer) => {
+            if (layer.options.uniqueID === ids) {
+              console.log("layers off2")
+              snowMapLayer.removeLayer(layer)
+              event.preventDefault();
+              displaySnowMap();
+            }
+          }, error => {
+            errorHandler(error);
+            toggleLoading(false);
+          });
+
+        }
+        // else {
+        //     console.log("off1")
+        //     ids = this.value;
+        //     snowMapLayer.eachLayer((layer) => {
+        //       if (layer.options.uniqueID === ids) {
+        //         snowMapLayer.removeLayer(layer)
+        //       }
+        //     }, error => {
+        //       errorHandler(error);
+        //       toggleLoading(false);
+        //     });
+        // }
       }
     });
 
