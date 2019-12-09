@@ -184,33 +184,22 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("check is off")
+                      console.log("check off")
                       ids = this.value;
-                      snowMapLayer.eachLayer((ids) => {
-                        console.log("working", ids)
-                        if (ids === newCoords.options.uniqueID) {
-                          newLayerGroup.removeLayer(newCoords);
+                      for(var i=0; i < coordinates.length; i++){
+                        if(newCoords.options.uniqueID === ids){
+                          // console.log("ids removed", coordinates[i].id)
+                          console.log("newCoords", newCoords.options.uniqueID)
+                          // snowMapLayer.removeLayer(newCoords)
+                        } else {
+                          errorHandler("There has been an error, please reload the page")
+                          toggleLoading(false);
                         }
-                      });
-
-
-                      // ids = this.value;
-                      // for(var i=0; i < coordinates.length; i++){
-                      //   if(newCoords.options.uniqueID === ids){
-                      //     console.log("ids removed", coordinates[i].id)
-                      //     console.log("newCoords", newCoords.options.uniqueID)
-                      //     // snowMapLayer.removeLayer(newCoords)
-                      //   } else {
-                      //     errorHandler("There has been an error, please reload the page")
-                      //     toggleLoading(false);
-                      //   }
                       }
                   }
               }
       }
     });
-
-
 
     document.getElementById('from').addEventListener('change', event => {
       var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
