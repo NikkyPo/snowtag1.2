@@ -8,9 +8,6 @@ geotab.addin.snowtag = () => {
 
   let map;
   let snowMapLayer;
-
-
-  let coordinates;
   let bounds;
   let ids;
   let option;
@@ -76,10 +73,10 @@ geotab.addin.snowtag = () => {
                "toDate": dateTo
          }
        }, function(exception) {
-         coordinates = [];
+         let coordinates = [];
          bounds = [];
           if (exception.length === 0) {
-            errorHandler('Not enough data for vehicle', elVehicleSelect);
+            errorHandler('Not enough data for ', deviceId);
             toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
