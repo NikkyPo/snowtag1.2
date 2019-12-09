@@ -549,9 +549,8 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('from').addEventListener('change', event => {
-      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
-      for (var i=0; i < checkedCbs.length; i++) {
-        if (this.checked) {
+      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (input.checked) {
           console.log("on2")
           ids = this.value;
 
