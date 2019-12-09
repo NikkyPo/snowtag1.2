@@ -185,26 +185,16 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("off")
+                      console.log("offs")
                       ids = this.value;
-
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
-                          console.log("working", layer.options.uniqueID)
                           snowMapLayer.removeLayer(layer)
+                        } else {
+                          errorHandler("There has been an error, please reload the page")
+                          toggleLoading(false);
                         }
                       });
-                      // for(var i=0; i < coordinates.length; i++){
-                      //   if(newCoords.options.uniqueID === ids){
-                      //     // console.log("ids removed", coordinates[i].id)
-                      //     console.log("newCoords", newCoords.options.uniqueID)
-                      //     console.log("ids", ids)
-                      //     snowMapLayer.removeLayer(newCoords)
-                      //   } else {
-                      //     errorHandler("There has been an error, please reload the page")
-                      //     toggleLoading(false);
-                      //   }
-                      // }
                   }
               }
       }
