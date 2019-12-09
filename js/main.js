@@ -7,7 +7,7 @@ geotab.addin.snowtag = () => {
   let api;
 
   let map;
-  const snowMapLayer;
+  let snowMapLayer;
 
 
   let coordinates;
