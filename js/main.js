@@ -120,7 +120,6 @@ geotab.addin.snowtag = () => {
                radius: 5.0
              })
              snowMapLayer.addLayer(newCoords)
-             console.log(newCoords)
          		}
              toggleLoading(false);
            }
@@ -190,6 +189,7 @@ geotab.addin.snowtag = () => {
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
                           console.log("ids removed", coordinates[i].id)
+                          console.log("newCoords", newCoords.options.uniqueID)
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
