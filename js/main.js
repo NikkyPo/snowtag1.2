@@ -80,7 +80,7 @@ geotab.addin.snowtag = () => {
          coordinates = [];
          bounds = [];
           if (exception.length === 0) {
-            errorHandler('Not enough data for ', option.name);
+            errorHandler('Not enough data for ', elVehicleSelect);
             toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
