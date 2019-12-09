@@ -188,8 +188,8 @@ geotab.addin.snowtag = () => {
                       ids = this.value;
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
-                          console.log("ids removed", coordinates[i].id)
-                          console.log("newCoords", newCoords.options.uniqueID)
+                          // console.log("ids removed", coordinates[i].id)
+                          // console.log("newCoords", newCoords.options.uniqueID)
                           console.log("ids", ids)
                           snowMapLayer.removeLayer(newCoords)
                         } else {
