@@ -214,10 +214,6 @@ geotab.addin.snowtag = () => {
           event.preventDefault();
           displaySnowMap();
         }
-        else {
-          errorHandler('error. reload page');
-          toggleLoading(false);
-        }
       }
     });
 
@@ -238,10 +234,6 @@ geotab.addin.snowtag = () => {
           });
           event.preventDefault();
           displaySnowMap();
-        }
-        else {
-          errorHandler('error. reload page');
-          toggleLoading(false);
         }
       }
     });
