@@ -14,6 +14,7 @@ geotab.addin.snowtag = () => {
   let bounds;
   let ids;
   let option;
+  let newCoords;
   let elVehicleSelect;
   let elDateFromInput;
   let elDateToInput;
@@ -112,7 +113,7 @@ geotab.addin.snowtag = () => {
            console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             let newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+             newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: uniqueID,
                color: "red",
                fillColor: "#f03",
@@ -189,7 +190,7 @@ geotab.addin.snowtag = () => {
                       for(var i=0; i < coordinates.length; i++){
                         if(coordinates[i].id == ids){
                           // console.log("ids removed", coordinates[i].id)
-                          console.log("newCoords", newCoords)
+                          console.log("newCoords", newCoords.options.uniqueID)
                           console.log("ids", ids)
                           snowMapLayer.removeLayer(newCoords)
                         } else {
