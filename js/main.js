@@ -112,7 +112,7 @@ geotab.addin.snowtag = () => {
            console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
-             const newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+             let newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: uniqueID,
                color: "red",
                fillColor: "#f03",
