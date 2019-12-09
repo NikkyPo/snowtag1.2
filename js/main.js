@@ -199,7 +199,7 @@ geotab.addin.snowtag = () => {
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
-          console.log("on 2", input)
+          console.log("on2", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             console.log(layer.options.uniqueID, ids)
@@ -214,43 +214,35 @@ geotab.addin.snowtag = () => {
           event.preventDefault();
           displaySnowMap();
         }
-        // else {
-        //     console.log("off1")
-        //     ids = this.value;
-        //     snowMapLayer.eachLayer((layer) => {
-        //       if (layer.options.uniqueID === ids) {
-        //         snowMapLayer.removeLayer(layer)
-        //       }
-        //     }, error => {
-        //       errorHandler(error);
-        //       toggleLoading(false);
-        //     });
-        // }
+        else {
+          errorHandler('error. reload page');
+          toggleLoading(false);
+        }
       }
     });
 
     document.getElementById('to').addEventListener('change', event => {
-      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
-      for (var i=0; i < checkedCbs.length; i++) {
-              checkedCbs[i].onchange = function() {
-                  if (this.checked) {
-                    console.log("on3")
-                    ids = this.value;
-                    event.preventDefault();
-                    displaySnowMap();
-                  } else {
-                      console.log("off3")
-                      ids = this.value;
-                      snowMapLayer.eachLayer((layer) => {
-                        if (layer.options.uniqueID === ids) {
-                          snowMapLayer.removeLayer(layer)
-                        }
-                      }, error => {
-                        errorHandler(error);
-                        toggleLoading(false);
-                      });
-                  }
-              }
+      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (input.checked) {
+          console.log("on3", input)
+          ids = input.value;
+          snowMapLayer.eachLayer((layer) => {
+            console.log(layer.options.uniqueID, ids)
+            if (layer.options.uniqueID === ids) {
+              console.log("layers off3")
+              snowMapLayer.removeLayer(layer)
+            }
+          }, error => {
+            errorHandler(error);
+            toggleLoading(false);
+          });
+          event.preventDefault();
+          displaySnowMap();
+        }
+        else {
+          errorHandler('error. reload page');
+          toggleLoading(false);
+        }
       }
     });
   };
