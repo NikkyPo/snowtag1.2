@@ -191,6 +191,7 @@ geotab.addin.snowtag = () => {
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
                           console.log("working", layer.options.uniqueID)
+                          snowMapLayer.removeLayer(layer)
                         }
                       });
                       // for(var i=0; i < coordinates.length; i++){
