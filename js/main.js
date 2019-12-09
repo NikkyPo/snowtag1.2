@@ -184,12 +184,12 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("off")
+                      console.log("check is off")
                       ids = this.value;
-                      snowMapLayer.eachLayer((layer) => {
-                        console.log("working", layer)
-                        if (ids === layer.options.uniqueID) {
-                          newLayerGroup.removeLayer(layer);
+                      snowMapLayer.eachLayer((ids) => {
+                        console.log("working", ids)
+                        if (ids === newCoords.options.uniqueID) {
+                          newLayerGroup.removeLayer(newCoords);
                         }
                       });
 
