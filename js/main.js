@@ -201,17 +201,53 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('from').addEventListener('change', event => {
-      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      ids = checkedCbs[0].value;
-      event.preventDefault();
-      displaySnowMap();
+      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+      for (var i=0; i < checkedCbs.length; i++) {
+              checkedCbs[i].onchange = function() {
+                  if (this.checked) {
+                    console.log("on")
+                    ids = this.value;
+                    event.preventDefault();
+                    displaySnowMap();
+                  } else {
+                      console.log("offs")
+                      ids = this.value;
+                      snowMapLayer.eachLayer((layer) => {
+                        if (layer.options.uniqueID === ids) {
+                          snowMapLayer.removeLayer(layer)
+                        }
+                      }, error => {
+                        errorHandler(error);
+                        toggleLoading(false);
+                      });
+                  }
+              }
+      }
     });
 
     document.getElementById('to').addEventListener('change', event => {
-      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-      ids = checkedCbs[0].value;
-      event.preventDefault();
-      displaySnowMap();
+      var checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+      for (var i=0; i < checkedCbs.length; i++) {
+              checkedCbs[i].onchange = function() {
+                  if (this.checked) {
+                    console.log("on")
+                    ids = this.value;
+                    event.preventDefault();
+                    displaySnowMap();
+                  } else {
+                      console.log("offs")
+                      ids = this.value;
+                      snowMapLayer.eachLayer((layer) => {
+                        if (layer.options.uniqueID === ids) {
+                          snowMapLayer.removeLayer(layer)
+                        }
+                      }, error => {
+                        errorHandler(error);
+                        toggleLoading(false);
+                      });
+                  }
+              }
+      }
     });
   };
 
