@@ -184,15 +184,14 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("check off")
+                      console.log("off")
                       ids = this.value;
-                      console.log("newCoords", newCoords.options.uniqueID)
-                      console.log("ids", ids)
                       for(var i=0; i < coordinates.length; i++){
-                        if(newCoords.options.uniqueID === ids){
-                          // console.log("ids removed", coordinates[i].id)
+                        if(coordinates[i].id == ids){
+                          console.log("ids removed", coordinates[i].id)
                           console.log("newCoords", newCoords.options.uniqueID)
-                          // snowMapLayer.removeLayer(newCoords)
+                          console.log("ids", ids)
+                          snowMapLayer.removeLayer(newCoords)
                         } else {
                           errorHandler("There has been an error, please reload the page")
                           toggleLoading(false);
