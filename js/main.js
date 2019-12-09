@@ -75,7 +75,7 @@ geotab.addin.snowtag = () => {
          let coordinates = [];
          let bounds = [];
           if (exception.length === 0) {
-            console.log(option.name)
+            console.log(exception.deviceId)
             errorHandler('Not enough data for ', exception.deviceId);
             toggleLoading(false);
           }
@@ -176,12 +176,12 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on")
+                    console.log("on1")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("offs")
+                      console.log("off1")
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
@@ -201,12 +201,12 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on")
+                    console.log("on2")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("offs")
+                      console.log("off2")
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
@@ -226,12 +226,12 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on")
+                    console.log("on3")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("offs")
+                      console.log("off3")
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
