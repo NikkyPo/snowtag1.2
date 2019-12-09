@@ -202,7 +202,7 @@ geotab.addin.snowtag = () => {
           console.log("on 2", input)
           ids = this.value;
           snowMapLayer.eachLayer((layer) => {
-            console.log(layer, ids)
+            console.log(layer.options.uniqueID, ids)
             if (layer.options.uniqueID === ids) {
               console.log("layers off2")
               snowMapLayer.removeLayer(layer)
