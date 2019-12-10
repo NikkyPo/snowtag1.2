@@ -198,10 +198,10 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('from').addEventListener('change', event => {
-      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-        if (input.checked) {
-          console.log("on2", input)
-          ids = input.value;
+      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (checkedCbs.checked) {
+          console.log("on2", checkedCbs)
+          ids = checkedCbs.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
               console.log("layers off2")
@@ -218,10 +218,10 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('to').addEventListener('change', event => {
-      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-        if (input.checked) {
-          console.log("on3", input)
-          ids = input.value;
+      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (checkedCbs.checked) {
+          console.log("on3", checkedCbs)
+          ids = checkedCbs.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
               console.log("layers off3")
