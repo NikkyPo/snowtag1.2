@@ -178,8 +178,17 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-    checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
-    checkedCbs.addEventListener('change', event => {
+
+    document.getElementById('vehicles').addEventListener('change', e => {
+
+      if(e.target && e.target.nodeName == '#vehicles input[type="checkbox"]') {
+    		// List item found!  Output the ID!
+    		console.log("clicked!");
+    	}
+
+
+
+      checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
