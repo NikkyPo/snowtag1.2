@@ -183,7 +183,7 @@ geotab.addin.snowtag = () => {
     document.getElementById('vehicles').addEventListener('change', event => {
       for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (checkedCbs.checked) {
-          console.log("on1")
+          console.log("on1", checkedCbs.value)
           ids = checkedCbs.value;
           snowMapLayer.hasLayer((ids) => {
             console.log("here1")
@@ -192,7 +192,7 @@ geotab.addin.snowtag = () => {
           displaySnowMap();
         } else {
           document.getElementById("error").innerHTML = "";
-            console.log("off1")
+            console.log("off1", checkedCbs.value)
             ids = checkedCbs.value;
             snowMapLayer.eachLayer((layer) => {
               if (layer.options.uniqueID === ids) {
