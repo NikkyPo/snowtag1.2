@@ -58,3 +58,34 @@
   </div>
 </body>
 </html>
+
+
+
+<!-- document.getElementById('vehicles').addEventListener('change', event => {
+  for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+    if (checkedCbs.checked) {
+      console.log("on1")
+      ids = checkedCbs.value;
+      snowMapLayer.eachLayer((layer) => {
+        if (layer.options.uniqueID === ids) {
+          return;
+        } else {
+          event.preventDefault();
+          displaySnowMap();
+        }
+      });
+    } else {
+      document.getElementById("error").innerHTML = "";
+        console.log("off1")
+        ids = checkedCbs.value;
+        snowMapLayer.eachLayer((layer) => {
+          if (layer.options.uniqueID === ids) {
+            snowMapLayer.removeLayer(layer)
+          }
+        }, error => {
+          errorHandler(error);
+          toggleLoading(false);
+        });
+      }
+  }
+}); -->

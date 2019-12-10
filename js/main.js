@@ -7,6 +7,7 @@ geotab.addin.snowtag = () => {
   let api;
 
   let map;
+  let checkedCbs;
   let snowMapLayer;
   let ids;
   let option;
@@ -184,14 +185,8 @@ geotab.addin.snowtag = () => {
         if (checkedCbs.checked) {
           console.log("on1")
           ids = checkedCbs.value;
-          snowMapLayer.eachLayer((layer) => {
-            if (layer.options.uniqueID === ids) {
-              return;
-            } else {
-              event.preventDefault();
-              displaySnowMap();
-            }
-          });
+          event.preventDefault();
+          displaySnowMap();
         } else {
           document.getElementById("error").innerHTML = "";
             console.log("off1")
