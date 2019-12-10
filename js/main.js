@@ -121,10 +121,10 @@ geotab.addin.snowtag = () => {
              map.fitBounds(bounds);
              newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
-               color: "red",
                fillColor: getColor(deviceId),
                fillOpacity: 0.5,
-               radius: 5.0
+               radius: 5.0,
+               color: "red"
              })
              snowMapLayer.addLayer(newCoords)
          		}
