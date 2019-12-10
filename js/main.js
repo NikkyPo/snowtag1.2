@@ -178,18 +178,17 @@ geotab.addin.snowtag = () => {
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
     // events
-
-      // checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+    checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+    document.getElementById('vehicles').addEventListener('change', event => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on 1")
+                    console.log("on1")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      document.getElementById("error").innerHTML = "";
-                      console.log("off 1")
+                      console.log("off1")
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
@@ -202,6 +201,7 @@ geotab.addin.snowtag = () => {
                   }
               }
       }
+    });
 
 
 
@@ -328,7 +328,7 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
         });
-        checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+
       }, errorHandler);
 
       setTimeout(() => {
