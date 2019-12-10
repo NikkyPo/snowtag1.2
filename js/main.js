@@ -179,18 +179,18 @@ geotab.addin.snowtag = () => {
 
     // events
 
-    document.getElementById('vehicles').addEventListener('change', event => {
+    checkedCbs.addEventListener('change', event => {
       // checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on1")
+                    console.log("on 1")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
                       document.getElementById("error").innerHTML = "";
-                      console.log("off1")
+                      console.log("off 1")
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
