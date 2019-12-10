@@ -110,13 +110,12 @@ geotab.addin.snowtag = () => {
          bounds.push(new L.LatLng(logRecords[0].latitude, logRecords[0].longitude));
          /**Adds coordinates to map**/
          if (coordinates.length == expectedCount) {
-           console.log("new points",coordinates)
            for (var i = 0; i < coordinates.length; i++) {
              map.fitBounds(bounds);
              newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
                color: "red",
-               fillColor: "#f03",
+               fillColor: getColor(deviceId),
                fillOpacity: 0.5,
                radius: 5.0
              })
@@ -147,6 +146,13 @@ geotab.addin.snowtag = () => {
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
     snowMapLayer = L.layerGroup().addTo(map);
+
+    function getColor(d) {
+      return
+      d.includes('A') ? '#7a0177' :
+      d.includes('B') ? '#FED976' :
+      '#FFEDA0';
+      }
 
 
     // find reused elements
