@@ -189,17 +189,18 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
                   } else {
-                      console.log("off1")
-                      ids = this.value;
-                      snowMapLayer.eachLayer((layer) => {
-                        if (layer.options.uniqueID === ids) {
-                          snowMapLayer.removeLayer(layer)
-                        }
-                      }, error => {
-                        errorHandler(error);
-                        toggleLoading(false);
-                      });
-                  }
+                    document.getElementById("error").innerHTML = "";
+                    console.log("off1")
+                    ids = this.value;
+                    snowMapLayer.eachLayer((layer) => {
+                      if (layer.options.uniqueID === ids) {
+                        snowMapLayer.removeLayer(layer)
+                      }
+                    }, error => {
+                      errorHandler(error);
+                      toggleLoading(false);
+                    });
+                 }
               }
       }
     });
