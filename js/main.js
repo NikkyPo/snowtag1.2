@@ -39,6 +39,13 @@ geotab.addin.snowtag = () => {
     }
   };
 
+  let getColor = d => {
+    return
+    d.includes('A') ? '#7a0177' :
+    d.includes('B') ? '#FED976' :
+    '#FFEDA0';
+  }
+
   /**
    * Displays the snowtags of a vehicle location history
    */
@@ -146,14 +153,6 @@ geotab.addin.snowtag = () => {
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
     snowMapLayer = L.layerGroup().addTo(map);
-
-    function getColor(d) {
-      return
-      d.includes('A') ? '#7a0177' :
-      d.includes('B') ? '#FED976' :
-      '#FFEDA0';
-      }
-
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
