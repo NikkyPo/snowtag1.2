@@ -42,10 +42,9 @@ geotab.addin.snowtag = () => {
   let getColor = d => {
     console.log("working color", d)
     console.log(typeof d)
-    return
-    d.match(/A/) !== false ? '#7a0177' :
-    d.match(/B/) !== false ? '#FED976' :
-    '#FFEDA0';
+    return d.match(/A/) !== false ? '#7a0177' :
+           d.match(/B/) !== false ? '#FED976' :
+                                    '#FFEDA0';
   }
 
   /**
@@ -125,8 +124,7 @@ geotab.addin.snowtag = () => {
                uniqueID: deviceId,
                fillColor: getColor(deviceId),
                fillOpacity: 0.5,
-               radius: 5.0,
-               color: "red"
+               radius: 5.0
              })
              snowMapLayer.addLayer(newCoords)
          		}
