@@ -79,9 +79,12 @@ geotab.addin.snowtag = () => {
           if (exception.length === 0) {
             for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
               console.log(input)
+              if(input.value === deviceId){
+                console.log("works")
+
+              }
             }
-            console.log("working", checkedCbs)
-            errorHandler('Not enough data ');
+            errorHandler('Not enough data for');
             toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
