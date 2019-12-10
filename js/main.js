@@ -181,10 +181,10 @@ geotab.addin.snowtag = () => {
     // events
 
     document.getElementById('vehicles').addEventListener('change', event => {
-      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-        if (checkedCbs.checked) {
+      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (input.checked) {
           console.log("on1")
-          ids = checkedCbs.value;
+          ids = input.value;
           event.preventDefault();
           displaySnowMap();
         } else {
@@ -204,10 +204,10 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('from').addEventListener('change', event => {
-      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-        if (checkedCbs.checked) {
-          console.log("on2", checkedCbs)
-          ids = checkedCbs.value;
+      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (input.checked) {
+          console.log("on2", input)
+          ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
               console.log("off2")
@@ -224,10 +224,10 @@ geotab.addin.snowtag = () => {
     });
 
     document.getElementById('to').addEventListener('change', event => {
-      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-        if (checkedCbs.checked) {
-          console.log("on3", checkedCbs)
-          ids = checkedCbs.value;
+      for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (input.checked) {
+          console.log("on3", input)
+          ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
               console.log("off3")
