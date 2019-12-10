@@ -7,7 +7,6 @@ geotab.addin.snowtag = () => {
   let api;
 
   let map;
-  let checkedCbs;
   let snowMapLayer;
   let ids;
   let option;
