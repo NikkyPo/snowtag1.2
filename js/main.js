@@ -179,6 +179,7 @@ geotab.addin.snowtag = () => {
       checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
+                document.getElementById("error").innerHTML = "";
                   if (this.checked) {
                     console.log("on1")
                     ids = this.value;
@@ -186,7 +187,6 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
                   } else {
                       console.log("off1")
-                      toggleLoading(true);
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
