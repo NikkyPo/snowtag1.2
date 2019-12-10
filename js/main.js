@@ -189,9 +189,9 @@ geotab.addin.snowtag = () => {
               return;
             } else {
               event.preventDefault();
-              displaySnowMap();            
+              displaySnowMap();
             }
-          }
+          });
         } else {
           document.getElementById("error").innerHTML = "";
             console.log("off1")
