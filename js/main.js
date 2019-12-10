@@ -41,10 +41,13 @@ geotab.addin.snowtag = () => {
 
   let getColor = d => {
     console.log("colors", d)
-    return d.match(/B/) !== true ? '#fe7676' :
-                                    '#FFEDA0';
+    return d.match(/B/) !=== "" ? '#fe7676' :
+                                    '#9e3c8c';
   }
 
+
+// red
+// purple
   /**
    * Displays the snowtags of a vehicle location history
    */
