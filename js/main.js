@@ -39,12 +39,19 @@ geotab.addin.snowtag = () => {
     }
   };
 
-  let getColor = d => {
-    console.log(d.match(/B/))
-    return d === 'b2B' ? '#000000' :
-                         '#9e3c8c';
+  // let getColor = d => {
+  //   console.log(d.match(/B/))
+  //   return d === 'b2B' ? '#000000' :
+  //                        '#9e3c8c';
+  // }
+  function getColor(d) {
+      switch (d) {
+      case "b2B":
+          return "#000000";
+      case "b2A":
+          return "#1F78B4";
+      }
   }
-
 
 // black
 // purple
