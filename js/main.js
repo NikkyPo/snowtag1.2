@@ -116,7 +116,7 @@ geotab.addin.snowtag = () => {
          /**Adds coordinates to map**/
          if (coordinates.length == expectedCount) {
            for (var i = 0; i < coordinates.length; i++) {
-             map.fitBounds(bounds);
+             // map.fitBounds(bounds);
              newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
                fillColor: getColor(deviceId),
@@ -182,13 +182,13 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on1")
+                    console.log("on 1")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
                     document.getElementById("error").innerHTML = "";
-                    console.log("off1")
+                    console.log("off 1")
                     ids = this.value;
                     snowMapLayer.eachLayer((layer) => {
                       if (layer.options.uniqueID === ids) {
@@ -206,11 +206,11 @@ geotab.addin.snowtag = () => {
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
-          console.log("on2", input)
+          console.log("on 2", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
-              console.log("off2")
+              console.log("off 2")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
@@ -226,11 +226,11 @@ geotab.addin.snowtag = () => {
     document.getElementById('to').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
-          console.log("on3", input)
+          console.log("on 3", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
-              console.log("off3")
+              console.log("off 3")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
