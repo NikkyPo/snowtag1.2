@@ -41,7 +41,7 @@ geotab.addin.snowtag = () => {
 
   let getColor = d => {
     console.log(d.match(/B/))
-    return d.match(/B/) === '' ? '#000000' :
+    return d.match(/B/) === 2 ? '#000000' :
                                     '#9e3c8c';
   }
 
