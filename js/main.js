@@ -41,7 +41,7 @@ geotab.addin.snowtag = () => {
 
   let getColor = d => {
     console.log(d.match(/B/))
-    return d == 'b2B' ? '#000000' :
+    return d == 'b2B' ? 'black' :
                          '#9e3c8c';
   }
   // function getColor(d) {
@@ -130,7 +130,7 @@ geotab.addin.snowtag = () => {
              newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
                fillColor: getColor(deviceId),
-               // fillOpacity: 0.5,
+               fillOpacity: 0.9,
                radius: 5.0
              })
              snowMapLayer.addLayer(newCoords)
