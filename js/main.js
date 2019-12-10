@@ -42,20 +42,9 @@ geotab.addin.snowtag = () => {
   let getColor = d => {
     console.log(d.match(/B/))
     return d == 'b2B' ? 'black' :
-                         '#9e3c8c';
+                         'green';
   }
-  // function getColor(d) {
-  //   console.log("working")
-  //     switch (d) {
-  //     case "b2B":
-  //         return "#000000";
-  //     case "b2A":
-  //         return "#1F78B4";
-  //     }
-  // }
 
-// black
-// purple
   /**
    * Displays the snowtags of a vehicle location history
    */
@@ -129,6 +118,7 @@ geotab.addin.snowtag = () => {
              // map.fitBounds(bounds);
              newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
+               color: "#333333",
                fillColor: getColor(deviceId),
                fillOpacity: 0.9,
                radius: 5.0
