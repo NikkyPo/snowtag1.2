@@ -40,7 +40,6 @@ geotab.addin.snowtag = () => {
   };
 
   let getColor = d => {
-    console.log(d.match(/B/))
     return d == 'b2B' ? 'black' :
                          'green';
   }
@@ -206,7 +205,7 @@ geotab.addin.snowtag = () => {
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
-          console.log("on 2", input)
+          console.log("on 2")
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
