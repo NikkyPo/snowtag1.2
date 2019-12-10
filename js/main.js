@@ -183,6 +183,7 @@ geotab.addin.snowtag = () => {
           event.preventDefault();
           displaySnowMap();
         } else {
+          document.getElementById("error").innerHTML
             console.log("off1")
             ids = checkedCbs.value;
             snowMapLayer.eachLayer((layer) => {
@@ -204,7 +205,7 @@ geotab.addin.snowtag = () => {
           ids = checkedCbs.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
-              console.log("layers off2")
+              console.log("off2")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
@@ -224,7 +225,7 @@ geotab.addin.snowtag = () => {
           ids = checkedCbs.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
-              console.log("layers off3")
+              console.log("off3")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
