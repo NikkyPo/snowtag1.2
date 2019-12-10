@@ -183,7 +183,7 @@ geotab.addin.snowtag = () => {
           event.preventDefault();
           displaySnowMap();
         } else {
-          document.getElementById("error").innerHTML
+          document.getElementById("error").innerHTML = "";
             console.log("off1")
             ids = checkedCbs.value;
             snowMapLayer.eachLayer((layer) => {
