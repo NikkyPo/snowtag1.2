@@ -181,7 +181,7 @@ geotab.addin.snowtag = () => {
     // events
 
     document.getElementById('vehicles').addEventListener('change', event => {
-      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+      let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')
         if (checkedCbs.checked) {
           console.log("on1")
           ids = checkedCbs.value;
@@ -206,7 +206,6 @@ geotab.addin.snowtag = () => {
               toggleLoading(false);
             });
           }
-      }
     });
 
     document.getElementById('from').addEventListener('change', event => {
