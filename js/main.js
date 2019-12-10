@@ -150,7 +150,6 @@ geotab.addin.snowtag = () => {
 
 
     // find reused elements
-    checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
     elVehicleSelect = document.getElementById('vehicles');
     elDateFromInput = document.getElementById('from');
     elDateToInput = document.getElementById('to');
@@ -176,11 +175,10 @@ geotab.addin.snowtag = () => {
 
     // events
 
-    checkedCbs.addEventListener('change', event => {
-
+    document.getElementById('vehicles').addEventListener('change', event => {
+      checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
-              checkedCbs[i].onclick= function() {
-                document.getElementById("error").innerHTML = "";
+              checkedCbs[i].onchange = function() {
                   if (this.checked) {
                     console.log("on1")
                     ids = this.value;
