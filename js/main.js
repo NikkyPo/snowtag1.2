@@ -41,12 +41,12 @@ geotab.addin.snowtag = () => {
 
   let getColor = d => {
     console.log("color", d)
-    return d.match(/B/) !== "" ? '#fe7676' :
+    return d.match(/B/) !== "" ? '#000000' :
                                     '#9e3c8c';
   }
 
 
-// red
+// black
 // purple
   /**
    * Displays the snowtags of a vehicle location history
@@ -122,7 +122,7 @@ geotab.addin.snowtag = () => {
              newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
                fillColor: getColor(deviceId),
-               fillOpacity: 0.5,
+               // fillOpacity: 0.5,
                radius: 5.0
              })
              snowMapLayer.addLayer(newCoords)
