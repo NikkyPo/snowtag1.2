@@ -76,7 +76,7 @@ geotab.addin.snowtag = () => {
          let coordinates = [];
          let bounds = [];
           if (exception.length === 0) {
-            console.log("works",  option.name)
+            console.log("working", checkedCbs)
             errorHandler('Not enough data ');
             toggleLoading(false);
           }
@@ -203,7 +203,6 @@ geotab.addin.snowtag = () => {
           console.log("on2", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
-            console.log(layer.options.uniqueID, ids)
             if (layer.options.uniqueID === ids) {
               console.log("layers off2")
               snowMapLayer.removeLayer(layer)
@@ -224,7 +223,6 @@ geotab.addin.snowtag = () => {
           console.log("on3", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
-            console.log(layer.options.uniqueID, ids)
             if (layer.options.uniqueID === ids) {
               console.log("layers off3")
               snowMapLayer.removeLayer(layer)
