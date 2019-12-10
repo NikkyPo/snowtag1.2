@@ -106,8 +106,6 @@ geotab.addin.snowtag = () => {
                }
            }
        }, logRecords => {
-         /**Removes previous layers before adding new ones**/
-         // snowMapLayer.clearLayers();
          coordinates.push({
            lat: logRecords[0].latitude,
            lon: logRecords[0].longitude,
@@ -179,7 +177,7 @@ geotab.addin.snowtag = () => {
 
     // events
 
-    document.getElementById('vehicles').addEventListener('click', function(e) {
+    document.getElementById('vehicles').addEventListener('click', function() {
       checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
@@ -204,31 +202,6 @@ geotab.addin.snowtag = () => {
               }
       }
     });
-
-
-
-    // document.getElementById('vehicles').addEventListener('change', event => {
-    //   for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-    //     if (checkedCbs.checked) {
-    //       console.log("on1", checkedCbs.value)
-    //       ids = checkedCbs.value;
-    //       event.preventDefault();
-    //       displaySnowMap();
-    //     } else {
-    //       document.getElementById("error").innerHTML = "";
-    //         console.log("off1", checkedCbs.value)
-    //         ids = checkedCbs.value;
-    //         snowMapLayer.eachLayer((layer) => {
-    //           if (layer.options.uniqueID === ids) {
-    //             snowMapLayer.removeLayer(layer)
-    //           }
-    //         }, error => {
-    //           errorHandler(error);
-    //           toggleLoading(false);
-    //         });
-    //       }
-    //   }
-    // });
 
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
