@@ -77,14 +77,12 @@ geotab.addin.snowtag = () => {
          let coordinates = [];
          let bounds = [];
           if (exception.length === 0) {
-            for (let error of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-              if (error.checked) {
-                console.log(error)
-                errorHandler('Not enough data ');
-                toggleLoading(false);
-              }
+            for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+              console.log(input)
             }
-            }
+            console.log("working", checkedCbs)
+            errorHandler('Not enough data ');
+            toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
                logRecord(exception[i],coordinates,bounds,exception.length);
