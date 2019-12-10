@@ -80,7 +80,7 @@ geotab.addin.snowtag = () => {
             for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
               if(input.value === deviceId){
                 console.log("Not enough data for ", input.name)
-                errorHandler('Not enough data ');
+                errorHandler('Not enough data for' + input.name);
                 toggleLoading(false);
               }
             }
