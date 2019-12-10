@@ -41,7 +41,6 @@ geotab.addin.snowtag = () => {
 
   let getColor = d => {
     console.log("working color", d)
-    console.log(typeof d)
     return d.match(/A/) !== false ? '#7a0177' :
            d.match(/B/) !== false ? '#FED976' :
                                     '#FFEDA0';
@@ -181,30 +180,54 @@ geotab.addin.snowtag = () => {
     // events
 
     document.getElementById('vehicles').addEventListener('change', event => {
-      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
-        if (checkedCbs.checked) {
-          console.log("on1", checkedCbs.value)
-          ids = checkedCbs.value;
-          snowMapLayer.hasLayer((ids) => {
-            console.log("here1")
-          });
-          event.preventDefault();
-          displaySnowMap();
-        } else {
-          document.getElementById("error").innerHTML = "";
-            console.log("off1", checkedCbs.value)
-            ids = checkedCbs.value;
-            snowMapLayer.eachLayer((layer) => {
-              if (layer.options.uniqueID === ids) {
-                snowMapLayer.removeLayer(layer)
+      checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
+      for (var i=0; i < checkedCbs.length; i++) {
+              checkedCbs[i].onchange = function() {
+                  if (this.checked) {
+                    console.log("on1")
+                    ids = this.value;
+                    event.preventDefault();
+                    displaySnowMap();
+                  } else {
+                      console.log("off1")
+                      ids = this.value;
+                      snowMapLayer.eachLayer((layer) => {
+                        if (layer.options.uniqueID === ids) {
+                          snowMapLayer.removeLayer(layer)
+                        }
+                      }, error => {
+                        errorHandler(error);
+                        toggleLoading(false);
+                      });
+                  }
               }
-            }, error => {
-              errorHandler(error);
-              toggleLoading(false);
-            });
-          }
       }
     });
+
+
+
+    // document.getElementById('vehicles').addEventListener('change', event => {
+    //   for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+    //     if (checkedCbs.checked) {
+    //       console.log("on1", checkedCbs.value)
+    //       ids = checkedCbs.value;
+    //       event.preventDefault();
+    //       displaySnowMap();
+    //     } else {
+    //       document.getElementById("error").innerHTML = "";
+    //         console.log("off1", checkedCbs.value)
+    //         ids = checkedCbs.value;
+    //         snowMapLayer.eachLayer((layer) => {
+    //           if (layer.options.uniqueID === ids) {
+    //             snowMapLayer.removeLayer(layer)
+    //           }
+    //         }, error => {
+    //           errorHandler(error);
+    //           toggleLoading(false);
+    //         });
+    //       }
+    //   }
+    // });
 
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
