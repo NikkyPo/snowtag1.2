@@ -39,20 +39,20 @@ geotab.addin.snowtag = () => {
     }
   };
 
-  // let getColor = d => {
-  //   console.log(d.match(/B/))
-  //   return d === 'b2B' ? '#000000' :
-  //                        '#9e3c8c';
-  // }
-  function getColor(d) {
-    console.log("working")
-      switch (d) {
-      case "b2B":
-          return "#000000";
-      case "b2A":
-          return "#1F78B4";
-      }
+  let getColor = d => {
+    console.log(d.match(/B/))
+    return d == 'b2B' ? '#000000' :
+                         '#9e3c8c';
   }
+  // function getColor(d) {
+  //   console.log("working")
+  //     switch (d) {
+  //     case "b2B":
+  //         return "#000000";
+  //     case "b2A":
+  //         return "#1F78B4";
+  //     }
+  // }
 
 // black
 // purple
@@ -127,7 +127,7 @@ geotab.addin.snowtag = () => {
          if (coordinates.length == expectedCount) {
            for (var i = 0; i < coordinates.length; i++) {
              // map.fitBounds(bounds);
-             newCoords = new L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
+             newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
                fillColor: getColor(deviceId),
                // fillOpacity: 0.5,
