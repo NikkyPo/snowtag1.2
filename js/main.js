@@ -186,6 +186,7 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
                   } else {
                       console.log("off1")
+                      toggleLoading(true);
                       ids = this.value;
                       snowMapLayer.eachLayer((layer) => {
                         if (layer.options.uniqueID === ids) {
