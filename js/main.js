@@ -81,11 +81,10 @@ geotab.addin.snowtag = () => {
               console.log(input)
               if(input.value === deviceId){
                 console.log("works")
-
+                errorHandler('Not enough data for');
+                toggleLoading(false);
               }
             }
-            errorHandler('Not enough data for');
-            toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
                logRecord(exception[i],coordinates,bounds,exception.length);
