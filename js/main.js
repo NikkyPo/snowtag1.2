@@ -186,12 +186,13 @@ geotab.addin.snowtag = () => {
           console.log("on1")
           ids = checkedCbs.value;
           snowMapLayer.eachLayer((layer) => {
+            console.log("here1")
             if (layer.options.uniqueID === ids) {
               return;
             }
           });
           event.preventDefault();
-          displaySnowMap();      
+          displaySnowMap();
         } else {
           document.getElementById("error").innerHTML = "";
             console.log("off1")
