@@ -75,7 +75,7 @@ geotab.addin.snowtag = () => {
          let coordinates = [];
          let bounds = [];
           if (exception.length === 0) {
-            console.log("working", exception)
+            console.log("working", deviceId)
             errorHandler('Not enough data for ');
             toggleLoading(false);
           }
