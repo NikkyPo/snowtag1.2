@@ -45,6 +45,7 @@ geotab.addin.snowtag = () => {
   //                        '#9e3c8c';
   // }
   function getColor(d) {
+    console.log("working")
       switch (d) {
       case "b2B":
           return "#000000";
