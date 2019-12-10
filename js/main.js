@@ -5,6 +5,7 @@ geotab.addin.snowtag = () => {
   'use strict';
 
   let api;
+
   let map;
   let snowMapLayer;
   let ids;
@@ -20,7 +21,6 @@ geotab.addin.snowtag = () => {
    * @param {string} message - The error message.
    */
   let errorHandler = message => {
-    console.log(message)
     elError.innerHTML = message;
   };
 
@@ -75,8 +75,8 @@ geotab.addin.snowtag = () => {
          let coordinates = [];
          let bounds = [];
           if (exception.length === 0) {
-
-            errorHandler('Not enough data for ', exception.deviceId;);
+            console.log(exception.deviceId)
+            errorHandler('Not enough data for ');
             toggleLoading(false);
           }
           for (var i = 0; i < exception.length; i++){
