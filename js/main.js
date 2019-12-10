@@ -21,6 +21,7 @@ geotab.addin.snowtag = () => {
    * @param {string} message - The error message.
    */
   let errorHandler = message => {
+    console.log(message, "here")
     elError.innerHTML = message;
   };
 
@@ -75,7 +76,7 @@ geotab.addin.snowtag = () => {
          let coordinates = [];
          let bounds = [];
           if (exception.length === 0) {
-            console.log("working", elVehicleSelect.value, ids)
+            console.log("works", elVehicleSelect.value, ids)
             errorHandler('Not enough data for ');
             toggleLoading(false);
           }
