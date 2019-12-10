@@ -176,29 +176,24 @@ geotab.addin.snowtag = () => {
     // events
 
     document.getElementById('vehicles').addEventListener('change', event => {
-      console.log("change1")
-      checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
-      for (var i=0; i < checkedCbs.length; i++) {
-        console.log("change2")
-              checkedCbs[i].onchange = function() {
-                  if (this.checked) {
-                    console.log("on1")
-                    ids = this.value;
-                    event.preventDefault();
-                    displaySnowMap();
-                  } else {
-                      console.log("off1")
-                      ids = this.value;
-                      snowMapLayer.eachLayer((layer) => {
-                        if (layer.options.uniqueID === ids) {
-                          snowMapLayer.removeLayer(layer)
-                        }
-                      }, error => {
-                        errorHandler(error);
-                        toggleLoading(false);
-                      });
-                  }
+      for (let checkedCbs of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
+        if (checkedCbs.checked) {
+          console.log("on1")
+          ids = checkedCbs.value;
+          event.preventDefault();
+          displaySnowMap();
+        } else {
+            console.log("off1")
+            ids = checkedCbs.value;
+            snowMapLayer.eachLayer((layer) => {
+              if (layer.options.uniqueID === ids) {
+                snowMapLayer.removeLayer(layer)
               }
+            }, error => {
+              errorHandler(error);
+              toggleLoading(false);
+            });
+          }
       }
     });
 
