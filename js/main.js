@@ -179,7 +179,7 @@ geotab.addin.snowtag = () => {
 
     // events
 
-    document.getElementById('vehicles').addEventListener('change', e => {
+    document.getElementById('vehicles').addEventListener('click', function(e) {
 
       if(e.target && e.target.nodeName == '#vehicles input[type="checkbox"]') {
     		// List item found!  Output the ID!
