@@ -322,6 +322,7 @@ geotab.addin.snowtag = () => {
                         var div = L.DomUtil.create('div', 'info legend'),
                             color = getColor(ids)
                             colorurl = color.options.iconUrl
+                            console.log(colorurl)
 
                             div.innerHTML ='<img src="' + getColor(colorurl) + '">';
 
