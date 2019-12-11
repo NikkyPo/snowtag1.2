@@ -70,25 +70,15 @@ label {
 }
 
 .pin2 {
-  background: #89849b;
-  top: 40%;
-  left: 50%;
-  margin-left: 115px;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  width: 8px;
-  height: 8px;
-}
-
-.pin2::after {
-  content: '';
-  width: 0px;
-  height: 0px;
-  bottom: -30px;
-  left: -6px;
-  background: #2F2F2F;
-  border: 10px solid transparent;
-  border-top: 17px solid #fff;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  background: #444;
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+  margin-top: -34px; /*Shift by arrow top+height*/
+  margin-left: -13px; /*Shift by half the marker width*/
 }
 
 /* .pin2 {
