@@ -48,41 +48,41 @@ geotab.addin.snowtag = () => {
 
 
   // let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
-  // let blueIcon = L.divIcon({
+  // let blueIcon = new L.Icon({
   //   className: 'my-div-icon', iconSize: null
   // });
   //
-  // let redIcon = L.divIcon({
+  // let redIcon = new L.Icon({
   //   className: 'custom-div-icon',
   //   html: "<div style='background-color:#4838cc;' class='marker-pin'></div>",
   //   iconSize: [30, 42],
   //   iconAnchor: [15, 42]
   // });
   //
-  // let greenIcon = L.divIcon({
+  // let greenIcon = new L.Icon({
   //   className: 'custom-div-icon',
   //   html: "<div style='background-color:#c30b82;' class='marker-pin'></div>",
   //   iconSize: [30, 42],
   //   iconAnchor: [15, 42]
   // });
   //
-  // let orangeIcon = L.divIcon({
+  // let orangeIcon = new L.Icon({
   //   className: 'my-div-icon', iconSize: null
   // });
   //
-  // let yellowIcon = L.divIcon({
+  // let yellowIcon = new L.Icon({
   //   className: 'my-div-icon', iconSize: null
   // });
   //
-  // let violetIcon = L.divIcon({
+  // let violetIcon = new L.Icon({
   //   className: 'my-div-icon', iconSize: null
   // });
   //
-  // let greyIcon = L.divIcon({
+  // let greyIcon = new L.Icon({
   //   className: 'my-div-icon', iconSize: null
   // });
   //
-  // let blackIcon = L.divIcon({
+  // let blackIcon = new L.Icon({
   //   className: 'my-div-icon', iconSize: null
   // });
 
@@ -94,7 +94,7 @@ geotab.addin.snowtag = () => {
 
 
   let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
-  let blueIcon = L.divIcon({
+  let blueIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -103,7 +103,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let redIcon = L.divIcon({
+  let redIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -112,7 +112,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let greenIcon = L.divIcon({
+  let greenIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -121,7 +121,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let orangeIcon = L.divIcon({
+  let orangeIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -130,7 +130,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let yellowIcon = L.divIcon({
+  let yellowIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -139,7 +139,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let violetIcon = L.divIcon({
+  let violetIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -148,7 +148,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let greyIcon = L.divIcon({
+  let greyIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
@@ -157,7 +157,7 @@ geotab.addin.snowtag = () => {
   	shadowSize: [41, 41]
   });
 
-  let blackIcon = L.divIcon({
+  let blackIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
   	shadowUrl: markerShadow,
   	iconSize: [25, 41],
