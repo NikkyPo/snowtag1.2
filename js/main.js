@@ -192,8 +192,9 @@ geotab.addin.snowtag = () => {
          if (coordinates.length == expectedCount) {
            for (var i = 0; i < coordinates.length; i++) {
              // map.fitBounds(bounds);
-             newCoords = L.marker([coordinates[i].lat,coordinates[i].lon], {
-               uniqueID: deviceId
+             newCoords = new L.marker([coordinates[i].lat,coordinates[i].lon], {
+               uniqueID: deviceId,
+               icon: getColor(deviceId)
              })
              snowMapLayer.addLayer(newCoords)
          		}
