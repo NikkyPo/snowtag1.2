@@ -7,7 +7,6 @@ geotab.addin.snowtag = () => {
   let api;
 
   let map;
-  let checkedLegend;
   let checkedCbs;
   let snowMapLayer;
   let ids;
@@ -313,17 +312,19 @@ geotab.addin.snowtag = () => {
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
-                    checkedLegend = this;
+
+
+
+
 
                     legend.onAdd = function (map) {
-                      console.log(this)
 
-                        var div = L.DomUtil.get(checkedLegend),
+                        var div = L.DomUtil.create('div', 'info legend'),
                             color = getColor(ids),
                             colorurl = color.options.iconUrl
                             console.log(colorurl)
 
-                            div.innerHTML ='<img width="10" height="12" src="' + colorurl + '">';
+                            div.innerHTML ='<img width="50" height="50"src="' + colorurl + '">';
 
                         return div;
                     };
