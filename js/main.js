@@ -280,8 +280,7 @@ geotab.addin.snowtag = () => {
 
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
-                '<i class="' + getColor(grades[i] + 1) + '"></i> ' +
-                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+                '<i class="' + getColor(grades[i]) + '"></i>');
         }
 
         return div;
