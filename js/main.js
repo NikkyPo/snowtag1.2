@@ -40,86 +40,9 @@ geotab.addin.snowtag = () => {
   };
 
   let getColor = d => {
-    return d == 'b2B' ? greenIcon :
-                         redIcon;
+    return d == 'b2B' ? 'black' :
+                         'green';
   }
-
-  let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
-  let blueIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let redIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let greenIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let orangeIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let yellowIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let violetIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let greyIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let blackIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-
-
-
 
   /**
    * Displays the snowtags of a vehicle location history
@@ -192,9 +115,12 @@ geotab.addin.snowtag = () => {
          if (coordinates.length == expectedCount) {
            for (var i = 0; i < coordinates.length; i++) {
              // map.fitBounds(bounds);
-             newCoords = new L.marker([coordinates[i].lat,coordinates[i].lon], {
+             newCoords = L.circleMarker([coordinates[i].lat,coordinates[i].lon], {
                uniqueID: deviceId,
-               icon: getColor(deviceId)
+               color: "#333333",
+               fillColor: getColor(deviceId),
+               fillOpacity: 0.9,
+               radius: 5.0
              })
              snowMapLayer.addLayer(newCoords)
          		}
@@ -223,32 +149,6 @@ geotab.addin.snowtag = () => {
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
     snowMapLayer = L.layerGroup().addTo(map);
-
-
-
-
-    let legend = L.control({position: 'bottomright'});
-    legend.onAdd = function (map) {
-
-        var div = L.DomUtil.create('div', 'info legend'),
-            grades = ['b2B', 'b2A'],
-            labels = [];
-
-        for (var i = 0; i < grades.length; i++) {
-            div.innerHTML +=
-                '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-        }
-
-        return div;
-    };
-
-    legend.addTo(map);
-
-
-
-
-
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
@@ -281,11 +181,13 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
+                    console.log("on 1")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
                     document.getElementById("error").innerHTML = "";
+                    console.log("off 1")
                     ids = this.value;
                     snowMapLayer.eachLayer((layer) => {
                       if (layer.options.uniqueID === ids) {
@@ -303,9 +205,11 @@ geotab.addin.snowtag = () => {
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
+          console.log("on 2")
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
+              console.log("off 2")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
@@ -321,9 +225,11 @@ geotab.addin.snowtag = () => {
     document.getElementById('to').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
+          console.log("on 3", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
+              console.log("off 3")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
