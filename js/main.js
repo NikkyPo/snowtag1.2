@@ -39,89 +39,6 @@ geotab.addin.snowtag = () => {
     }
   };
 
-  let getColor = d => {
-    return d == 'b2B' ? greenIcon :
-                         redIcon;
-  }
-
-
-  L.Icon.default.ImagePath = 'snowtag_test/images/'
-
-  let blueIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-blue.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let redIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-red.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let greenIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-green.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let orangeIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-orange.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let yellowIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-yellow.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let violetIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-violet.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let greyIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-grey.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-  let blackIcon = new L.Icon({
-  	iconUrl: 'images/marker-icon-black.png',
-  	shadowUrl: 'images/marker-shadow.png',
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
-  });
-
-
-
-
 
   /**
    * Displays the snowtags of a vehicle location history
@@ -225,6 +142,92 @@ geotab.addin.snowtag = () => {
     credits.addAttribution('© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
 
     snowMapLayer = L.layerGroup().addTo(map);
+
+
+
+
+    let getColor = d => {
+      return d == 'b2B' ? greenIcon :
+                           redIcon;
+    }
+
+
+    L.Icon.default.ImagePath = 'snowtag_test/images/'
+
+    let blueIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-blue.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let redIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-red.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let greenIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-green.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let orangeIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-orange.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let yellowIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-yellow.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let violetIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-violet.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let greyIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-grey.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+    let blackIcon = new L.Icon({
+    	iconUrl: 'images/marker-icon-black.png',
+    	shadowUrl: 'images/marker-shadow.png',
+    	iconSize: [25, 41],
+    	iconAnchor: [12, 41],
+    	popupAnchor: [1, -34],
+    	shadowSize: [41, 41]
+    });
+
+
+
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
