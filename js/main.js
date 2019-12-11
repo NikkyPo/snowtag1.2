@@ -44,78 +44,125 @@ geotab.addin.snowtag = () => {
                          redIcon;
   }
 
+
+
+
+
+
+
   let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
-  let blueIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let blueIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
 
-  let redIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let redIcon = L.divIcon({
+    className: 'my-div-icon2', iconSize: null
   });
 
-  let greenIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let greenIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
 
-  let orangeIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let orangeIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
 
-  let yellowIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let yellowIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
 
-  let violetIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let violetIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
 
-  let greyIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let greyIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
 
-  let blackIcon = new L.Icon({
-  	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
-  	shadowUrl: markerShadow,
-  	iconSize: [25, 41],
-  	iconAnchor: [12, 41],
-  	popupAnchor: [1, -34],
-  	shadowSize: [41, 41]
+  let blackIcon = L.divIcon({
+    className: 'my-div-icon', iconSize: null
   });
+
+
+
+
+
+
+
+
+  //
+  // let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
+  // let blueIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let redIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let greenIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let orangeIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let yellowIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let violetIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let greyIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
+  //
+  // let blackIcon = L.divIcon({
+  // 	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
+  // 	shadowUrl: markerShadow,
+  // 	iconSize: [25, 41],
+  // 	iconAnchor: [12, 41],
+  // 	popupAnchor: [1, -34],
+  // 	shadowSize: [41, 41]
+  // });
 
 
 
