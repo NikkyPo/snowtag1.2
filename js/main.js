@@ -324,7 +324,7 @@ geotab.addin.snowtag = () => {
                             colorurl = color.options.iconUrl
                             console.log(colorurl)
 
-                            div.innerHTML ='<img width="50" height="50"src="' + colorurl + '">';
+                            div.innerHTML ='<img width="20" height="25"src="' + colorurl + '">';
 
                         return div;
                     };
