@@ -40,8 +40,8 @@ geotab.addin.snowtag = () => {
   };
 
   let getColor = d => {
-    return d == 'b2B' ? greenIcon :
-                         redIcon;
+    return d == 'b2B' ? redIcon :
+                         greenIcon;
   }
 
 
@@ -79,7 +79,6 @@ geotab.addin.snowtag = () => {
   let blackIcon = L.divIcon({
     className: 'my-div-icon', iconSize: null
   });
-
 
 
 
