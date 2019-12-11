@@ -46,8 +46,8 @@ geotab.addin.snowtag = () => {
 
 
   let blueIcon = new L.Icon({
-  	iconUrl: '.../images/marker-icon-blue.png',
-  	shadowUrl: '.../images/marker-shadow.png',
+  	iconUrl: '.../snowtag_test/images/marker-icon-blue.png',
+  	shadowUrl: '.../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -55,8 +55,8 @@ geotab.addin.snowtag = () => {
   });
 
   let redIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-red.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-red.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -64,8 +64,8 @@ geotab.addin.snowtag = () => {
   });
 
   let greenIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-green.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-green.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -73,8 +73,8 @@ geotab.addin.snowtag = () => {
   });
 
   let orangeIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-orange.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-orange.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -82,8 +82,8 @@ geotab.addin.snowtag = () => {
   });
 
   let yellowIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-yellow.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-yellow.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -91,8 +91,8 @@ geotab.addin.snowtag = () => {
   });
 
   let violetIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-violet.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-violet.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -100,8 +100,8 @@ geotab.addin.snowtag = () => {
   });
 
   let greyIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-grey.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-grey.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -109,8 +109,8 @@ geotab.addin.snowtag = () => {
   });
 
   let blackIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-black.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: '../snowtag_test/images/marker-icon-black.png',
+  	shadowUrl: '../snowtag_test/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
