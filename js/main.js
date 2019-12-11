@@ -320,14 +320,10 @@ geotab.addin.snowtag = () => {
                     legend.onAdd = function (map) {
 
                         var div = L.DomUtil.create('div', 'info legend'),
-                            grades = ['b2B', 'b2A'],
+                            grades = getColor(ids)
+                            console.log(grades)
                             labels = [];
-
-                        for (var i = 0; i < grades.length; i++) {
-                            div.innerHTML +=
-                                '<img src="' + getColor(grades[i]) + '">' +
-                                grades[i] + (grades[i] ? '&ndash;' + grades[i] + '<br>' : '+');
-                        }
+                            div.innerHTML ='<img src="' + getColor(grades[i]) + '">';
 
                         return div;
                     };
