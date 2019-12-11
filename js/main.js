@@ -224,6 +224,32 @@ geotab.addin.snowtag = () => {
 
     snowMapLayer = L.layerGroup().addTo(map);
 
+
+
+
+    let legend = L.control({position: 'bottomright'});
+    legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'info legend'),
+            grades = ['b2B', 'b2A'],
+            labels = [];
+
+        for (var i = 0; i < grades.length; i++) {
+            div.innerHTML +=
+                '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+        }
+
+        return div;
+    };
+
+    legend.addTo(map);
+
+
+
+
+
+
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
     elDateFromInput = document.getElementById('from');
@@ -255,13 +281,11 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log("on 1")
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
                   } else {
                     document.getElementById("error").innerHTML = "";
-                    console.log("off 1")
                     ids = this.value;
                     snowMapLayer.eachLayer((layer) => {
                       if (layer.options.uniqueID === ids) {
@@ -279,11 +303,9 @@ geotab.addin.snowtag = () => {
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
-          console.log("on 2")
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
-              console.log("off 2")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
@@ -299,11 +321,9 @@ geotab.addin.snowtag = () => {
     document.getElementById('to').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
-          console.log("on 3", input)
           ids = input.value;
           snowMapLayer.eachLayer((layer) => {
             if (layer.options.uniqueID === ids) {
-              console.log("off 3")
               snowMapLayer.removeLayer(layer)
             }
           }, error => {
