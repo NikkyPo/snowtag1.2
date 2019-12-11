@@ -47,9 +47,6 @@ geotab.addin.snowtag = () => {
 
 
 
-
-
-
   let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
   let blueIcon = L.divIcon({
     className: 'my-div-icon', iconSize: null
@@ -283,7 +280,7 @@ geotab.addin.snowtag = () => {
 
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
-                '<i class="legend" style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                '<i class="' + getColor(grades[i] + 1) + '"></i> ' +
                 grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
         }
 
