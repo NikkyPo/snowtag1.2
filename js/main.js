@@ -53,7 +53,7 @@ geotab.addin.snowtag = () => {
   });
 
   let redIcon = L.divIcon({
-    className: 'my-div-icon2', iconSize: null
+    className: 'pin2', iconSize: null
   });
 
   let greenIcon = L.divIcon({
@@ -280,7 +280,8 @@ geotab.addin.snowtag = () => {
 
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
-                '<i class="' + getColor(grades[i]) + '"></i>');
+                '<i class="' + getColor(grades[i]) + '"></i> ' +
+                grades[i] + (grades[i] ? '&ndash;' + grades[i] + '<br>' : '+');
         }
 
         return div;
