@@ -53,9 +53,7 @@ geotab.addin.snowtag = () => {
   });
 
   let redIcon = L.divIcon({
-    className: 'pin2',
-    iconSize: [30, 42],
-    iconAnchor: [15, 42]
+    className: 'pin2', iconSize: null
   });
 
   let greenIcon = L.divIcon({
