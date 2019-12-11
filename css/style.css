@@ -57,26 +57,25 @@ label {
     opacity: 0.7;
 }
 .marker-pin {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-left: 115px;
-
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
   border: 8px solid #c30b82;
-  width: 8px;
-  height: 8px;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
 }
 
 .marker-pin::after {
-  position: absolute;
-  content: '';
-  width: 0px;
-  height: 0px;
-  bottom: -30px;
-  left: -6px;
-  border: 10px solid transparent;
-  border-top: 17px solid #c30b82;
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 3px 0 0 3px;
+    position: absolute;
+    border-radius: 50%;
+    border-top: 17px solid #c30b82;
  }
 
 .custom-div-icon {
