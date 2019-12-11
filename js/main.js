@@ -285,7 +285,7 @@ geotab.addin.snowtag = () => {
 
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
-                '<i class="' + getColor(grades[i]) + '"></i> ' +
+                '<img src="' + getColor(grades[i]) + '">' +
                 grades[i] + (grades[i] ? '&ndash;' + grades[i] + '<br>' : '+');
         }
 
@@ -293,9 +293,6 @@ geotab.addin.snowtag = () => {
     };
 
     legend.addTo(map);
-
-
-
 
 
 
