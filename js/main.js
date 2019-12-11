@@ -277,24 +277,6 @@ geotab.addin.snowtag = () => {
 
 
     let legend = L.control({position: 'bottomright'});
-    legend.onAdd = function (map) {
-
-        var div = L.DomUtil.create('div', 'info legend'),
-            grades = ['b2B', 'b2A'],
-            labels = [];
-
-        for (var i = 0; i < grades.length; i++) {
-            div.innerHTML +=
-                '<img src="' + getColor(grades[i]) + '">' +
-                grades[i] + (grades[i] ? '&ndash;' + grades[i] + '<br>' : '+');
-        }
-
-        return div;
-    };
-
-    legend.addTo(map);
-
-
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
@@ -330,6 +312,34 @@ geotab.addin.snowtag = () => {
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
+
+
+
+
+
+                    legend.onAdd = function (map) {
+
+                        var div = L.DomUtil.create('div', 'info legend'),
+                            grades = ['b2B', 'b2A'],
+                            labels = [];
+
+                        for (var i = 0; i < grades.length; i++) {
+                            div.innerHTML +=
+                                '<img src="' + getColor(grades[i]) + '">' +
+                                grades[i] + (grades[i] ? '&ndash;' + grades[i] + '<br>' : '+');
+                        }
+
+                        return div;
+                    };
+
+                    legend.addTo(map);
+
+
+
+
+
+
+
                   } else {
                     document.getElementById("error").innerHTML = "";
                     ids = this.value;
