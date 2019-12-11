@@ -40,9 +40,86 @@ geotab.addin.snowtag = () => {
   };
 
   let getColor = d => {
-    return d == 'b2B' ? 'black' :
-                         'green';
+    return d == 'b2B' ? blueIcon :
+                         redIcon;
   }
+
+
+  var blueIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-blue.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var redIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-red.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var greenIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-green.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var orangeIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-orange.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var yellowIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-yellow.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var violetIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-violet.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var greyIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-grey.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+  var blackIcon = new L.Icon({
+  	iconUrl: 'images/marker-icon-black.png',
+  	shadowUrl: 'images/marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
+
+
+
+
 
   /**
    * Displays the snowtags of a vehicle location history
