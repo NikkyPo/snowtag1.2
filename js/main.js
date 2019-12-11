@@ -54,12 +54,14 @@ geotab.addin.snowtag = () => {
 
   let redIcon = L.divIcon({
     className: 'custom-div-icon',
+    html: "<div style='background-color:#4838cc;' class='marker-pin'></div>",
     iconSize: [30, 42],
     iconAnchor: [15, 42]
   });
 
   let greenIcon = L.divIcon({
     className: 'custom-div-icon',
+    html: "<div style='background-color:#c30b82;' class='marker-pin'></div>",
     iconSize: [30, 42],
     iconAnchor: [15, 42]
   });
