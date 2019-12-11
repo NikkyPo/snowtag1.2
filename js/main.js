@@ -312,6 +312,7 @@ geotab.addin.snowtag = () => {
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
+                    console.log(checkedCbs[i])
 
 
 
@@ -319,7 +320,7 @@ geotab.addin.snowtag = () => {
 
                     legend.onAdd = function (map) {
 
-                        var div = L.DomUtil.get('#vehicles input[type="checkbox"]'),
+                        var div = L.DomUtil.get(checkedCbs[i]),
                             color = getColor(ids),
                             colorurl = color.options.iconUrl
                             console.log(colorurl)
