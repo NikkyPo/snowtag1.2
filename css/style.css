@@ -70,7 +70,6 @@ label {
 }
 
 .pin2 {
-  position: absolute;
   background: #89849b;
   top: 40%;
   left: 50%;
@@ -82,7 +81,6 @@ label {
 }
 
 .pin2::after {
-  position: absolute;
   content: '';
   width: 0px;
   height: 0px;
