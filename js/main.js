@@ -156,7 +156,7 @@ geotab.addin.snowtag = () => {
     }
 
 
-    L.Icon.default.imagePath = 'snowtag_test/images/'
+    // L.Icon.default.imagePath = 'snowtag_test/images/'
 
     let blueIcon = new L.Icon({
     	iconUrl: 'images/marker-icon-blue.png',
@@ -231,7 +231,7 @@ geotab.addin.snowtag = () => {
     });
 
 
-    
+
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
