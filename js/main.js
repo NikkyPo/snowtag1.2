@@ -312,9 +312,10 @@ geotab.addin.snowtag = () => {
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
-                    console.log(this)
 
-                    legend.onAdd = function (this) {
+
+                    legend.onAdd = function (map) {
+                      console.log(this)
 
                         var div = L.DomUtil.get(this),
                             color = getColor(ids),
