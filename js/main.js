@@ -40,14 +40,14 @@ geotab.addin.snowtag = () => {
   };
 
   let getColor = d => {
-    return d == 'b2B' ? blueIcon :
+    return d == 'b2B' ? greenIcon :
                          redIcon;
   }
 
 
   var blueIcon = new L.Icon({
-  	iconUrl: '../images/marker-icon-blue.png',
-  	shadowUrl: '../images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-blue.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -55,8 +55,8 @@ geotab.addin.snowtag = () => {
   });
 
   var redIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-red.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-red.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -64,8 +64,8 @@ geotab.addin.snowtag = () => {
   });
 
   var greenIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-green.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-green.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -73,8 +73,8 @@ geotab.addin.snowtag = () => {
   });
 
   var orangeIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-orange.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-orange.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -82,8 +82,8 @@ geotab.addin.snowtag = () => {
   });
 
   var yellowIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-yellow.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-yellow.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -91,8 +91,8 @@ geotab.addin.snowtag = () => {
   });
 
   var violetIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-violet.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-violet.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -100,8 +100,8 @@ geotab.addin.snowtag = () => {
   });
 
   var greyIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-grey.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-grey.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
@@ -109,8 +109,8 @@ geotab.addin.snowtag = () => {
   });
 
   var blackIcon = new L.Icon({
-  	iconUrl: './images/marker-icon-black.png',
-  	shadowUrl: './images/marker-shadow.png',
+  	iconUrl: 'https://my207.geotab.com/images/marker-icon-black.png',
+  	shadowUrl: 'https://my207.geotab.com/images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
