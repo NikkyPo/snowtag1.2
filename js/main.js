@@ -319,7 +319,7 @@ geotab.addin.snowtag = () => {
 
                     legend.onAdd = function (map) {
 
-                        var div = L.DomUtil.create('div', 'info legend'),
+                        var div = L.DomUtil.get('#vehicles input[type="checkbox"]'),
                             color = getColor(ids),
                             colorurl = color.options.iconUrl
                             console.log(colorurl)
