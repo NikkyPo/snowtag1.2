@@ -45,6 +45,8 @@ geotab.addin.snowtag = () => {
   }
 
 
+  L.Icon.default.ImagePath = 'snowtag_test/images/'
+
   let blueIcon = new L.Icon({
   	iconUrl: 'images/marker-icon-blue.png',
   	shadowUrl: 'images/marker-shadow.png',
