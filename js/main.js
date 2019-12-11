@@ -45,76 +45,92 @@ geotab.addin.snowtag = () => {
   }
 
 
-  let blueIcon = new L.Icon({
+  let blueIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-blue.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let redIcon = new L.Icon({
+  let redIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-red.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let greenIcon = new L.Icon({
+  let greenIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-green.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let orangeIcon = new L.Icon({
+  let orangeIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-orange.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let yellowIcon = new L.Icon({
+  let yellowIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-yellow.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let violetIcon = new L.Icon({
+  let violetIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-violet.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let greyIcon = new L.Icon({
+  let greyIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-grey.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
-  let blackIcon = new L.Icon({
+  let blackIcon = L.Icon.extend({
+    options: {
   	iconUrl: 'images/marker-icon-black.png',
   	shadowUrl: 'images/marker-shadow.png',
   	iconSize: [25, 41],
   	iconAnchor: [12, 41],
   	popupAnchor: [1, -34],
   	shadowSize: [41, 41]
+  }
   });
 
 
@@ -193,7 +209,8 @@ geotab.addin.snowtag = () => {
            for (var i = 0; i < coordinates.length; i++) {
              // map.fitBounds(bounds);
              newCoords = L.marker([coordinates[i].lat,coordinates[i].lon], {
-               uniqueID: deviceId
+               uniqueID: deviceId,
+               icon: getColor(deviceId)
              })
              snowMapLayer.addLayer(newCoords)
          		}
