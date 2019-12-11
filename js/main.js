@@ -44,115 +44,78 @@ geotab.addin.snowtag = () => {
                          redIcon;
   }
 
-    var LeafIcon = L.Icon.extend({
-        options: {
-            shadowUrl: 'marker-shadow.png',
-            iconSize:     [38, 95],
-            shadowSize:   [50, 64],
-            iconAnchor:   [22, 94],
-            shadowAnchor: [4, 62],
-            popupAnchor:  [-3, -76]
-        }
-    });
 
-    let blueIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-blue.png'});
+  let blueIcon = new L.Icon({
+  	iconUrl: 'marker-icon-blue.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let redIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-red.png'});
+  let redIcon = new L.Icon({
+  	iconUrl: 'marker-icon-red.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let greenIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-green.png'});
+  let greenIcon = new L.Icon({
+  	iconUrl: 'marker-icon-green.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let orangeIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-orange.png'});
+  let orangeIcon = new L.Icon({
+  	iconUrl: 'marker-icon-orange.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let yellowIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-yellow.png'});
+  let yellowIcon = new L.Icon({
+  	iconUrl: 'marker-icon-yellow.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let violetIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-violet.png'});
+  let violetIcon = new L.Icon({
+  	iconUrl: 'marker-icon-violet.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let greyIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-grey.png'});
+  let greyIcon = new L.Icon({
+  	iconUrl: 'marker-icon-grey.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
-    let blackIcon = new LeafIcon({
-    	iconUrl: 'marker-icon-black.png'});
-
-
-
-
-  // let blueIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-blue.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let redIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-red.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let greenIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-green.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let orangeIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-orange.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let yellowIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-yellow.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let violetIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-violet.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let greyIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-grey.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
-  //
-  // let blackIcon = new L.Icon({
-  // 	iconUrl: 'images/marker-icon-black.png',
-  // 	shadowUrl: 'images/marker-shadow.png',
-  // 	iconSize: [25, 41],
-  // 	iconAnchor: [12, 41],
-  // 	popupAnchor: [1, -34],
-  // 	shadowSize: [41, 41]
-  // });
+  let blackIcon = new L.Icon({
+  	iconUrl: 'marker-icon-black.png',
+  	shadowUrl: 'marker-shadow.png',
+  	iconSize: [25, 41],
+  	iconAnchor: [12, 41],
+  	popupAnchor: [1, -34],
+  	shadowSize: [41, 41]
+  });
 
 
 
