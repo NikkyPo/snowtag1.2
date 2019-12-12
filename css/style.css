@@ -56,6 +56,9 @@ label {
     margin-right: 8px;
     opacity: 0.7;
 }
+input[type=checkbox].checkmateFormEditField {
+  -webkit-appearance:checkbox;
+}
 
 /* .marker-pin {
   width: 30px;
