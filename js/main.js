@@ -310,6 +310,7 @@ geotab.addin.snowtag = () => {
               checkedCbs[i].onchange = function() {
                 console.log(this)
                   if (this.checked) {
+                    console.log(this)
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
