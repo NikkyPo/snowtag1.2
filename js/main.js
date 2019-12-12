@@ -275,8 +275,8 @@ geotab.addin.snowtag = () => {
 
 
 
-
-    let legend = L.control({position: 'bottomright'});
+    let mapbuttons_div = L.DomUtil.create('div', 'mapbuttons leaflet-bar leaflet-control');
+    let legend = L.control({position: 'bottomleft'});
 
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
@@ -330,6 +330,7 @@ geotab.addin.snowtag = () => {
                     };
 
                     legend.addTo(map);
+                    mapbuttons_div.appendChild(legend.getContainer());
 
 
 
