@@ -315,8 +315,8 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
 
 
-
-                    var div = document.getElementByClassName("checkbox").value(this)
+                    console.log("works")
+                    var div = document.getElementByClassName("checkbox").value(ids)
                     console.log(div)
 
 
