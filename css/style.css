@@ -64,11 +64,11 @@ input[type="checkbox"] {
 
 
 
-.checkbox input[type="checkbox"] {
+#vehicles input[type="checkbox"] {
     opacity: 0;
 }
 
-.checkbox label {
+#vehicles label {
     position: relative;
     display: inline-block;
 
@@ -76,8 +76,8 @@ input[type="checkbox"] {
     padding-left: 22px;
 }
 
-.checkbox label::before,
-.checkbox label::after {
+#vehicles label::before,
+#vehicles label::after {
     position: absolute;
     content: "";
 
@@ -86,7 +86,7 @@ input[type="checkbox"] {
 }
 
 /*Outer box of the fake checkbox*/
-.checkbox label::before{
+#vehicles label::before{
     height: 16px;
     width: 16px;
 
@@ -100,7 +100,7 @@ input[type="checkbox"] {
 }
 
 /*Checkmark of the fake checkbox*/
-.checkbox label::after {
+#vehicles label::after {
     height: 5px;
     width: 9px;
     border-left: 2px solid;
@@ -113,17 +113,17 @@ input[type="checkbox"] {
 }
 
 /*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+#vehicles input[type="checkbox"] + label::after {
     content: none;
 }
 
 /*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+#vehicles input[type="checkbox"]:checked + label::after {
     content: "";
 }
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox input[type="checkbox"]:focus + label::before {
+#vehicles input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
 }
 
