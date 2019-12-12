@@ -59,9 +59,9 @@ label {
 input[type="checkbox"] {
     background-color: initial;
     cursor: default;
-    -webkit-appearance: none;
+    -webkit-appearance: checkbox;
     box-sizing: border-box;
-    margin: 13px 13px 3px 4px;
+    margin: 13px 31px 3px 4px;
     padding: initial;
     border: initial;
 }
