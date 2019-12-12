@@ -309,14 +309,15 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-                    console.log(this)
+
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
 
 
 
-                    // document.getElementById("vehi").innerHTML = "";
+                    var div = document.getElementByTagName("input").value(this)
+                    console.log(div)
 
 
 
@@ -444,7 +445,6 @@ geotab.addin.snowtag = () => {
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
-          elVehicleSelect.insertAdjacentHTML('beforebegin', '<img>');
           option = document.createElement("input")
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
