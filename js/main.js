@@ -443,7 +443,7 @@ geotab.addin.snowtag = () => {
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
           option.value = vehicle.id;
-          option.class = 'check'
+          option.class = 'checkmateFormEditField'
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
