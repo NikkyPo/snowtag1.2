@@ -316,7 +316,7 @@ geotab.addin.snowtag = () => {
 
 
 
-                    var div = document.getElementByTagName("input").value(this)
+                    var div = document.getElementByClassName("checkbox").value(this)
                     console.log(div)
 
 
@@ -449,6 +449,7 @@ geotab.addin.snowtag = () => {
           option.setAttribute('type', 'checkbox')
           option.name = vehicle.name;
           option.value = vehicle.id;
+          option.className = 'checkbox'
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
