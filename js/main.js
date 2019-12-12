@@ -308,12 +308,15 @@ geotab.addin.snowtag = () => {
       checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
-                console.log(this)
                   if (this.checked) {
                     console.log(this)
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
+
+
+
+                    // document.getElementById("vehi").innerHTML = "";
 
 
 
@@ -448,7 +451,7 @@ geotab.addin.snowtag = () => {
 
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
-          elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
+          elVehicleSelect.insertAdjacentHTML('beforeend', '<p>');
         });
 
       }, errorHandler);
