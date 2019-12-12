@@ -275,7 +275,7 @@ geotab.addin.snowtag = () => {
 
 
 
-    let mapbuttons_div = L.DomUtil.create('div', 'mapbuttons leaflet-bar leaflet-control');
+
     let legend = L.control({position: 'bottomleft'});
 
     // find reused elements
@@ -308,6 +308,7 @@ geotab.addin.snowtag = () => {
       checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
+                console.log(this)
                   if (this.checked) {
                     ids = this.value;
                     event.preventDefault();
@@ -317,20 +318,19 @@ geotab.addin.snowtag = () => {
 
 
 
-                    legend.onAdd = function (map) {
-
-                        var div = L.DomUtil.create('div', 'info legend'),
-                            color = getColor(ids),
-                            colorurl = color.options.iconUrl
-                            console.log(colorurl)
-
-                            div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
-
-                        return div;
-                    };
-
-                    legend.addTo(map);
-                    mapbuttons_div.appendChild(legend.getContainer());
+                    // legend.onAdd = function (map) {
+                    //
+                    //     var div = L.DomUtil.create('div', 'info legend'),
+                    //         color = getColor(ids),
+                    //         colorurl = color.options.iconUrl
+                    //         console.log(colorurl)
+                    //
+                    //         div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
+                    //
+                    //     return div;
+                    // };
+                    //
+                    // legend.addTo(map);
 
 
 
