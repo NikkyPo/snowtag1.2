@@ -39,6 +39,8 @@ geotab.addin.snowtag = () => {
     }
   };
 
+
+// returns color based on id properties
   let getColor = d => {
     return d == d.match(/b2B/gi) ? redIcon :
            d == d.match(/b2A/gi) ? greenIcon :
@@ -51,6 +53,7 @@ geotab.addin.snowtag = () => {
   }
 
 
+// markers
 
   let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
   let blueIcon = new L.Icon({
@@ -232,11 +235,6 @@ geotab.addin.snowtag = () => {
 
     snowMapLayer = L.layerGroup().addTo(map);
 
-
-
-
-    let legend = L.control({position: 'bottomleft'});
-
     // find reused elements
     elVehicleSelect = document.getElementById('vehicles');
     elDateFromInput = document.getElementById('from');
@@ -261,8 +259,11 @@ geotab.addin.snowtag = () => {
     elDateFromInput.value = yy + '-' + mm + '-' + dd + 'T' + '00:00';
     elDateToInput.value = yy + '-' + mm + '-' + dd + 'T' + '23:59';
 
-    // events
-
+    // events based on checkboxes. First gets list of vehicle ids, checks if they are checked,
+    // then passes the checked value to the displaySnowMap() function and the getColor() Function
+    // to get appropriate colored marker.
+    // When checkbox is unchecked, the value is again passed and the layer and colors are cleared
+    // from the map.
     document.getElementById('vehicles').addEventListener('click', function() {
       checkedCbs = document.querySelectorAll('#vehicles input[type="checkbox"]');
       for (var i=0; i < checkedCbs.length; i++) {
@@ -297,6 +298,8 @@ geotab.addin.snowtag = () => {
       }
     });
 
+    // events based on change in date. Checks to see what checkboxes have changed and passes the
+    // values to the snowMapLayer()
     document.getElementById('from').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
@@ -315,6 +318,8 @@ geotab.addin.snowtag = () => {
       }
     });
 
+    // events based on change in date. Checks to see what checkboxes have changed and passes the
+    // values to the snowMapLayer()
     document.getElementById('to').addEventListener('change', event => {
       for (let input of document.querySelectorAll('#vehicles input[type="checkbox"]')) {
         if (input.checked) {
@@ -380,6 +385,8 @@ geotab.addin.snowtag = () => {
           return;
         }
 
+        // grabs all vehicles and creates checkboxes, divs and <br> based
+        // on values.
         vehicles.sort(sortByName);
         elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
         vehicles.forEach(vehicle => {
