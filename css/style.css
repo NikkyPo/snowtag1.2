@@ -43,7 +43,7 @@ label {
     color: #cc0000;
 }
 #checkmateContent {
-  margin: 0 0 0 0px
+  margin: 0 0 0 5px
 }
 .legend {
     width: 18px;
@@ -54,7 +54,4 @@ label {
 img{
   height: 18px;
   width: 11px;
-}
-#vehicles{
-  margin: 5px;
 }
