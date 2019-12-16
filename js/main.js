@@ -320,49 +320,6 @@ geotab.addin.snowtag = () => {
                     elem.setAttribute("src", colorurl);
                     document.getElementById(ids).appendChild(elem);
 
-                    // var color = getColor(ids)
-                    // var colorurl = color.options.iconUrl
-                    // var elem = document.createElement("img");
-                    //
-                    // var test = elem.setAttribute("src", colorurl);
-                    // console.log("works", test)
-                    // var testing = document.getElementByClassName(ids).appendChild(elem);
-                    // console.log("working", test, testing)
-
-
-                    // legend.onAdd = function (map) {
-                    //
-                    //     var div = L.DomUtil.create('div', 'info legend'),
-                            // color = getColor(ids),
-                            // colorurl = color.options.iconUrl
-                            // console.log(colorurl)
-                    //
-                            // div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
-                    //
-                    //     return div;
-                    // };
-                    //
-                    // legend.addTo(map);
-
-
-                    // legend.onAdd = function (map) {
-                    //
-                    //     var div = L.DomUtil.create('div', 'info legend'),
-                            // color = getColor(ids),
-                            // colorurl = color.options.iconUrl
-                            // console.log(colorurl)
-                    //
-                            // div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
-                    //
-                    //     return div;
-                    // };
-                    //
-                    // legend.addTo(map);
-
-
-
-
-
 
 
                   } else {
@@ -467,6 +424,7 @@ geotab.addin.snowtag = () => {
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
+          elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
           var div = document.createElement("div")
           option = document.createElement("input")
           option.setAttribute('type', 'checkbox')
