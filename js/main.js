@@ -314,23 +314,36 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
 
-
-                    console.log("works")
                     var div = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
-                    console.log(div)
-
-
-
+                    color = getColor(ids),
+                    colorurl = color.options.iconUrl
+                    console.log(colorurl)
+                    div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
 
 
                     // legend.onAdd = function (map) {
                     //
                     //     var div = L.DomUtil.create('div', 'info legend'),
-                    //         color = getColor(ids),
-                    //         colorurl = color.options.iconUrl
-                    //         console.log(colorurl)
+                            // color = getColor(ids),
+                            // colorurl = color.options.iconUrl
+                            // console.log(colorurl)
                     //
-                    //         div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
+                            // div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
+                    //
+                    //     return div;
+                    // };
+                    //
+                    // legend.addTo(map);
+
+
+                    // legend.onAdd = function (map) {
+                    //
+                    //     var div = L.DomUtil.create('div', 'info legend'),
+                            // color = getColor(ids),
+                            // colorurl = color.options.iconUrl
+                            // console.log(colorurl)
+                    //
+                            // div.innerHTML ='<img width="18" height="30"src="' + colorurl + '">';
                     //
                     //     return div;
                     // };
