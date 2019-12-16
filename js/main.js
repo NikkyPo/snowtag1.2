@@ -319,10 +319,10 @@ geotab.addin.snowtag = () => {
                     // var div = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
-                    console.log("working", colorurl)
+                    console.log("working", ids)
                     var elem = document.createElement("img");
                     elem.setAttribute("src", colorurl);
-                    document.getElementById('vehicles').appendChild(elem);
+                    document.getElementById(ids).appendChild(elem);
 
 
 
@@ -479,7 +479,7 @@ geotab.addin.snowtag = () => {
           option.name = vehicle.name;
           option.value = vehicle.id;
           option.className = 'checkbox'
-          div.className = vehicle.id;
+          div.id = vehicle.id;
 
           elVehicleSelect.appendChild(div);
           elVehicleSelect.appendChild(option);
