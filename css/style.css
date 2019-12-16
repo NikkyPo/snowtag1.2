@@ -50,7 +50,8 @@ label {
     width: 18px;
     height: 18px;
     float: left;
-    margin-right: 8px;
+    margin-right: 4px;
+    margin-left: 4px;
 }
 img{
   height: 18px;
