@@ -41,8 +41,7 @@ geotab.addin.snowtag = () => {
 
   let getColor = d => {
     var str = d;
-    console.log(str)
-    return str == 'b2B' ? redIcon :
+    return str == str.match(/b2B/gi) ? redIcon :
                          greenIcon;
   }
 
