@@ -40,13 +40,13 @@ geotab.addin.snowtag = () => {
   };
 
   let getColor = d => {
-    return d == d.match(/1/gi) ? redIcon :
-           d == d.match(/2/gi) ? greenIcon :
-           d == d.match(/3/gi) ? blueIcon :
-           d == d.match(/4/gi) ? orangeIcon :
-           d == d.match(/5/gi) ? yellowIcon :
-           d == d.match(/6/gi) ? violetIcon :
-           d == d.match(/7/gi) ? greyIcon :
+    return d == d.match(/[0]/gi) ? redIcon :
+           d == d.match(/[1]/gi) ? greenIcon :
+           d == d.match(/[2]/gi) ? blueIcon :
+           d == d.match(/[3-4]/gi) ? orangeIcon :
+           d == d.match(/[5-6]/gi) ? yellowIcon :
+           d == d.match(/[7-8]/gi) ? violetIcon :
+           d == d.match(/[9]/gi) ? greyIcon :
                                  blackIcon;
   }
 
