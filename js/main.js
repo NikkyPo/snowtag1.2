@@ -319,9 +319,9 @@ geotab.addin.snowtag = () => {
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
                     var elem = document.createElement("img");
-                    console.log("works")
-                    var test = elem.setAttribute("src", colorurl);
 
+                    var test = elem.setAttribute("src", colorurl);
+                    console.log("works", test)
                     var testing = document.getElementByClassName(ids).appendChild(elem);
                     console.log("working", test, testing)
 
