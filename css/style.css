@@ -46,13 +46,15 @@ label {
   margin: 0 0 0 0px
 }
 .legend {
-    line-height: 18px;
+    width: 18px;
     height: 18px;
     float: left;
     margin-right: 3px;
-    margin-left: 5px;
 }
 img{
   height: 18px;
   width: 11px;
+}
+#vehicles{
+  margin: 5px;
 }
