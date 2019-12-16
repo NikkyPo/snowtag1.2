@@ -47,10 +47,12 @@ label {
 }
 .legend {
     line-height: 30px;
+    width: 18px;
+    height: 30px;
     float: left;
     margin-right: 8px;
 }
 img{
-  height: 30px;
-  width: 18px;
+  height: 18px;
+  width: 30px;
 }
