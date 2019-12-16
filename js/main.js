@@ -325,7 +325,8 @@ geotab.addin.snowtag = () => {
                     snowMapLayer.eachLayer((layer) => {
                       if (layer.options.uniqueID === ids) {
                         snowMapLayer.removeLayer(layer)
-                        document.getElementById(ids).style.display='none';
+                        var node = document.getElementById(ids);
+                        node.removeChild(node.getElementByTagName('img'));
                       }
                     }, error => {
                       errorHandler(error);
