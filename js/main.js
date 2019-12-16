@@ -424,7 +424,6 @@ geotab.addin.snowtag = () => {
         vehicles.sort(sortByName);
 
         vehicles.forEach(vehicle => {
-          elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
           var div = document.createElement("div")
           option = document.createElement("input")
           option.setAttribute('type', 'checkbox')
