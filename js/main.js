@@ -322,7 +322,7 @@ geotab.addin.snowtag = () => {
                     console.log("working", colorurl)
                     var elem = document.createElement("img");
                     elem.setAttribute("src", colorurl);
-                    document.getElementById('vehicles').appendChild(elem);
+                    document.getElementByClassName(ids).appendChild(elem);
 
 
 
