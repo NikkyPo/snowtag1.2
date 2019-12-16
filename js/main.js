@@ -322,11 +322,12 @@ geotab.addin.snowtag = () => {
                   } else {
                     document.getElementById("error").innerHTML = "";
                     ids = this.value;
+                    var node = document.getElementById(ids);
+                    node.removeChild(node.getElementByTagName('img'));
+                    console.log("working")
                     snowMapLayer.eachLayer((layer) => {
                       if (layer.options.uniqueID === ids) {
                         snowMapLayer.removeLayer(layer)
-                        var node = document.getElementById(ids);
-                        node.removeChild(node.getElementByTagName('img'));
                       }
                     }, error => {
                       errorHandler(error);
