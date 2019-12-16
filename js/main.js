@@ -321,8 +321,7 @@ geotab.addin.snowtag = () => {
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
                     console.log(colorurl)
-                    var content = document.createTextNode('<img width="18" height="30"src="' + colorurl + '">');
-                    div.appendChild(content)
+                    div.insertAdjacentHTML('<img width="18" height="30"src="' + colorurl + '">');
 
 
                     // legend.onAdd = function (map) {
