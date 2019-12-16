@@ -422,7 +422,7 @@ geotab.addin.snowtag = () => {
         }
 
         vehicles.sort(sortByName);
-
+        elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
         vehicles.forEach(vehicle => {
           var div = document.createElement("div")
           option = document.createElement("input")
@@ -435,6 +435,7 @@ geotab.addin.snowtag = () => {
           elVehicleSelect.appendChild(div);
           elVehicleSelect.appendChild(option);
           elVehicleSelect.insertAdjacentText('beforeend', option.name);
+          elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
           elVehicleSelect.insertAdjacentHTML('beforeend', '<br>');
         });
 
