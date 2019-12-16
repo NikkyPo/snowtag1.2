@@ -309,7 +309,6 @@ geotab.addin.snowtag = () => {
       for (var i=0; i < checkedCbs.length; i++) {
               checkedCbs[i].onchange = function() {
                   if (this.checked) {
-
                     ids = this.value;
                     event.preventDefault();
                     displaySnowMap();
@@ -320,14 +319,13 @@ geotab.addin.snowtag = () => {
                     elem.setAttribute("src", colorurl);
                     document.getElementById(ids).appendChild(elem);
 
-
-
                   } else {
                     document.getElementById("error").innerHTML = "";
                     ids = this.value;
                     snowMapLayer.eachLayer((layer) => {
                       if (layer.options.uniqueID === ids) {
                         snowMapLayer.removeLayer(layer)
+                        document.getElementById(ids).style.display='none';
                       }
                     }, error => {
                       errorHandler(error);
