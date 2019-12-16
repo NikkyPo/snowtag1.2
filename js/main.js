@@ -318,11 +318,11 @@ geotab.addin.snowtag = () => {
                     // var byValue = document.querySelectorAll('input[value="'+ ids +'"]');
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
-                    console.log("working", colorurl)
                     var elem = document.createElement("img");
-                    elem.setAttribute("src", colorurl);
-                    document.getElementByClassName(ids).appendChild(elem);
+                    var test = elem.setAttribute("src", colorurl);
 
+                    var testing = document.getElementByClassName(ids).appendChild(elem);
+                    console.log("working", test, testing)
 
                     // legend.onAdd = function (map) {
                     //
