@@ -52,53 +52,6 @@ geotab.addin.snowtag = () => {
 
 
 
-
-  // let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
-  // let blueIcon = new L.Icon({
-  //   className: 'my-div-icon', iconSize: null
-  // });
-  //
-  // let redIcon = new L.Icon({
-  //   className: 'custom-div-icon',
-  //   html: "<div style='background-color:#4838cc;' class='marker-pin'></div>",
-  //   iconSize: [30, 42],
-  //   iconAnchor: [15, 42]
-  // });
-  //
-  // let greenIcon = new L.Icon({
-  //   className: 'custom-div-icon',
-  //   html: "<div style='background-color:#c30b82;' class='marker-pin'></div>",
-  //   iconSize: [30, 42],
-  //   iconAnchor: [15, 42]
-  // });
-  //
-  // let orangeIcon = new L.Icon({
-  //   className: 'my-div-icon', iconSize: null
-  // });
-  //
-  // let yellowIcon = new L.Icon({
-  //   className: 'my-div-icon', iconSize: null
-  // });
-  //
-  // let violetIcon = new L.Icon({
-  //   className: 'my-div-icon', iconSize: null
-  // });
-  //
-  // let greyIcon = new L.Icon({
-  //   className: 'my-div-icon', iconSize: null
-  // });
-  //
-  // let blackIcon = new L.Icon({
-  //   className: 'my-div-icon', iconSize: null
-  // });
-
-
-
-
-
-
-
-
   let markerShadow = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png'
   let blueIcon = new L.Icon({
   	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
@@ -327,10 +280,8 @@ geotab.addin.snowtag = () => {
 
                   } else {
                     document.getElementById("error").innerHTML = "";
-
                     ids = this.value;
                     var node = document.getElementById(ids);
-                    console.log("works")
                     node.removeChild(node.firstChild);
 
                     snowMapLayer.eachLayer((layer) => {
