@@ -315,12 +315,13 @@ geotab.addin.snowtag = () => {
                     displaySnowMap();
 
 
-                    var byValue = document.querySelectorAll('input[value="'+ ids +'"]');
+                    // var byValue = document.querySelectorAll('input[value="'+ ids +'"]');
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
+                    console.log("working", colorurl)
                     var elem = document.createElement("img");
                     elem.setAttribute("src", colorurl);
-                    byValue.appendChild(elem);
+                    document.getElementByClassName(ids).appendChild(elem);
 
 
                     // legend.onAdd = function (map) {
@@ -468,8 +469,7 @@ geotab.addin.snowtag = () => {
           option.value = vehicle.id;
           option.className = 'checkbox'
 
-          div.value = vehicle.id;
-          div.className = 'legend'
+          div.className = vehicle.id;
 
           elVehicleSelect.appendChild(div);
           elVehicleSelect.appendChild(option);
