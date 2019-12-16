@@ -314,14 +314,14 @@ geotab.addin.snowtag = () => {
                     event.preventDefault();
                     displaySnowMap();
 
+
                     // var div = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
-                    console.log("works", colorurl)
+                    console.log("working", colorurl)
                     var elem = document.createElement("img");
                     elem.setAttribute("src", colorurl);
-                    document.getElementById('vehicles').appendChild(elem);
-
+                    document.querySelectorAll('#vehicles input[type="checkbox"]:checked').appendChild(elem);
 
 
                     // legend.onAdd = function (map) {
