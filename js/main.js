@@ -318,8 +318,9 @@ geotab.addin.snowtag = () => {
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
                     console.log("works", colorurl)
-                    var content = '<img width="18" height="30"src="' + colorurl + '">';
-                    document.getElementById('vehicles').appendChild(content);
+                    var elem = document.createElement("img");
+                    elem.setAttribute("src", colorurl);
+                    document.getElementById('vehicles').appendChild(elem);
 
 
 
