@@ -49,9 +49,12 @@ label {
     width: 18px;
     height: 18px;
     float: left;
-    margin-right: 3px;
+    margin-left: 5px;
 }
 img{
   height: 18px;
   width: 11px;
+}
+input {
+  margin-top: 5px;
 }
