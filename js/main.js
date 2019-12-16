@@ -317,7 +317,7 @@ geotab.addin.snowtag = () => {
                     // var div = document.querySelectorAll('#vehicles input[type="checkbox"]:checked');
                     var color = getColor(ids)
                     var colorurl = color.options.iconUrl
-                    console.log(colorurl)
+                    console.log("works", colorurl)
                     var content = '<img width="18" height="30"src="' + colorurl + '">';
                     document.getElementById('vehicles').appendChild(content);
 
