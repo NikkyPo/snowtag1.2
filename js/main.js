@@ -316,7 +316,7 @@ geotab.addin.snowtag = () => {
 
 
                     console.log(ids)
-                    var div = document.getElementByClassName("checkbox")
+                    var div = document.querySelectorAll('#vehicles input[type="checkbox"]');
                     console.log(div)
 
 
