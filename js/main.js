@@ -52,7 +52,7 @@ geotab.addin.snowtag = () => {
                                  blackIcon;
   };
 
-
+console.log("test")
 // markers
 
   let markerShadow = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png";
