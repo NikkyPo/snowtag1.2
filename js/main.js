@@ -40,7 +40,7 @@ geotab.addin.snowtag = () => {
   };
 
 
-returns color based on id properties
+//returns color based on id properties
   let getColor = d => {
     return d == d.match(/b2B/gi) ? redIcon :
            d == d.match(/b2A/gi) ? greenIcon :
