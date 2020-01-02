@@ -4,11 +4,11 @@
 	"version": "1.0",
 	"items": [
 		{
-			"icon": "images/icon_test.svg",
-			"url": "https://nikkypo.github.io/snowtag1.2/snowtag1.2.html",
+			"icon": "images/snow.svg",
+			"url": "https://nikkypo.github.io/snowtag1.2/index.html",
 			"path": "sdkAddinsLink/",
 			"menuName": {
-				"en": "Map Replay"
+				"en": "Snow Tagging Map"
 			}
 		}
 	],
