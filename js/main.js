@@ -42,19 +42,28 @@ geotab.addin.snowtag = () => {
 
 // returns color based on id properties
   let getColor = d => {
-    return d == d.match(/ahov30$/gi) ? redIcon :
-           d == d.match(/bipw4$/gi) ? greenIcon :
-           d == d.match(/cjqx5$/gi) ? blueIcon :
-           d == d.match(/dkry6$/gi) ? orangeIcon :
-           d == d.match(/elsz7$/gi) ? yellowIcon :
-           d == d.match(/fmt18$/gi) ? violetIcon :
-           d == d.match(/gnu29$/gi) ? greyIcon :
+    return d == d.match(/b2B/gi) ? redIcon :
+           d == d.match(/b2A/gi) ? greenIcon :
+           d == d.match(/b29/gi) ? blueIcon :
+           d == d.match(/[3-4]/gi) ? orangeIcon :
+           d == d.match(/[5-6]/gi) ? yellowIcon :
+           d == d.match(/[7-8]/gi) ? violetIcon :
+           d == d.match(/[9]/gi) ? greyIcon :
                                  blackIcon;
   };
 
-console.log("test")
+  // let getColor = d => {
+  //   return d == d.match(/ahov30$/gi) ? redIcon :
+  //          d == d.match(/bipw4$/gi) ? greenIcon :
+  //          d == d.match(/cjqx5$/gi) ? blueIcon :
+  //          d == d.match(/dkry6$/gi) ? orangeIcon :
+  //          d == d.match(/elsz7$/gi) ? yellowIcon :
+  //          d == d.match(/fmt18$/gi) ? violetIcon :
+  //          d == d.match(/gnu29$/gi) ? greyIcon :
+  //                                blackIcon;
+  // };
 // markers
-
+console.log("testing")
   let markerShadow = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png";
   let blueIcon = new L.Icon({
     iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png",
