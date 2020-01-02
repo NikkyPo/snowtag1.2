@@ -1,11 +1,11 @@
 {
-	"name": "Snow Tagging Test",
+	"name": "Snow Tagging v1.2",
 	"supportEmail": "nicole.helgeson@ci.stpaul.mn.us",
 	"version": "1.0",
 	"items": [
 		{
 			"icon": "images/icon_test.svg",
-			"url": "https://nikkypo.github.io/snowtag_test/mapreplay.html",
+			"url": "https://nikkypo.github.io/snowtag1.2/snowtag1.2.html",
 			"path": "sdkAddinsLink/",
 			"menuName": {
 				"en": "Map Replay"
