@@ -42,17 +42,17 @@ geotab.addin.snowtag = () => {
 
 // returns color based on id properties
   let getColor = d => {
-    return d == d.match(/[ahov30]$/gim) ? redIcon :
-           d == d.match(/[bipw4]$/gim) ? greenIcon :
-           d == d.match(/[cjqx5]$/gim) ? blueIcon :
-           d == d.match(/[dkry6]$/gim) ? orangeIcon :
-           d == d.match(/[elsz7]$/gim) ? yellowIcon :
-           d == d.match(/[fmt18]$/gim) ? violetIcon :
-           d == d.match(/[gnu29]$/gim) ? greyIcon :
+    return d == d.match(/[ahov30]$/gi) ? redIcon :
+           d == d.match(/[bipw4]$/gi) ? greenIcon :
+           d == d.match(/[cjqx5]$/gi) ? blueIcon :
+           d == d.match(/[dkry6]$/gi) ? orangeIcon :
+           d == d.match(/[elsz7]$/gi) ? yellowIcon :
+           d == d.match(/[fmt18]$/gi) ? violetIcon :
+           d == d.match(/[gnu29]$/gi) ? greyIcon :
                                  blackIcon;
   };
 
-console.log("testing")
+console.log("test")
 // markers
 
   let markerShadow = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png";
